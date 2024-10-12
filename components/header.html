@@ -5,6 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Header</title>
   <link rel="stylesheet" href="../style.css" />
+  <script>
+    // Menu toggle function needs to be in the global scope
+    function toggleMenu() {
+      const navContainer = document.querySelector('.nav-container');
+      
+      if (navContainer.classList.contains('active')) {
+        navContainer.classList.remove('active'); // Remove if already active
+      } else {
+        navContainer.classList.add('active'); // Add if not present
+      }
+    }
+  
+    document.addEventListener('DOMContentLoaded', function() {
+      console.log('Page has loaded!');
+  
+      // Ensure on page load the class 'active' is not present
+      const navContainer = document.querySelector('.nav-container');
+      navContainer.classList.remove('active');
+    });
+  </script>
 </head>
 <body>
   <header class="site-header">
@@ -92,23 +112,5 @@
       </div>
     </div>
   </header>
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      // Menu toggle
-      function toggleMenu() {
-        const navContainer = document.querySelector('.nav-container');
-        
-        if (navContainer.classList.contains('active')) {
-          navContainer.classList.remove('active'); // Remove if already active
-        } else {
-          navContainer.classList.add('active'); // Add if not present
-        }
-      }
-
-      // Ensure on page load the class 'active' is not present
-      const navContainer = document.querySelector('.nav-container');
-      navContainer.classList.remove('active');
-    });
-  </script>
 </body>
 </html>

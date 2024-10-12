@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Laptops Page</title>
+  <title>Camera Page</title>
   <link rel="stylesheet" href="../style.css" />
 
-  <!-- Script -->
+  <!-- Load Components -->
   <script>
     // Load the header component
     fetch('/components/header.html')
       .then(response => response.text())
       .then(data => {
-          document.getElementById('header-container').innerHTML = data;
+        document.getElementById('header-container').innerHTML = data;
       })
       .catch(error => console.error('Error loading header:', error));
 
@@ -20,7 +20,7 @@
     fetch('/components/footer.html')
       .then(response => response.text())
       .then(data => {
-          document.getElementById('footer-container').innerHTML = data;
+        document.getElementById('footer-container').innerHTML = data;
       })
       .catch(error => console.error('Error loading footer:', error));
   </script>
@@ -29,10 +29,14 @@
   <!-- Header -->
   <header id="header-container"></header>
 
-  <main class="laptops-container">
+  <!-- Main -->
+  <main class="contact-container">
+
+    <!-- Breadcum -->
     <div class="breadcum">
-      <a href="/index.html">HOME</a> / <a href="/products/laptops.html">LAPTOPS</a>
+      <a href="/index.html">HOME</a> / <a href="/camera.html">CAMERAS</a>
     </div>
+
     <div class="container__products">
       <div class="container__products__items"></div>
     </div>
@@ -40,7 +44,6 @@
 
   <!-- Footer -->
   <footer id="footer-container"></footer>
-  <script src="../laptop.js"></script>
-  <script src="../script.js"></script>
+  <script src="./camera.js"></script>
 </body>
 </html>

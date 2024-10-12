@@ -7,14 +7,14 @@
   <link rel="stylesheet" href="../style.css" />
 
   <!-- EmailJS SDK -->
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   <script type="text/javascript">
     (function() {
       emailjs.init({
         publicKey: "b6nWOZy-cxyFa51ce",
       });
     })();
-  </script>
+  </script> -->
 
   <!-- Load Components -->
   <script>
@@ -133,32 +133,41 @@
       const submitButton = document.querySelector('.form__submit-btn');
       submitButton.textContent = 'Sending...';  // Change the button text to "Sending..."
   
-      const serviceID = 'service_k6cri13';
-      const templateID = 'template_thgkqkc';
+      const serviceID = 'service_4akq5we';
+      const templateID = 'template_nqtpsw6';
   
       // Get form values
       const templateParams = {
-        name: document.getElementById('name').value,
-        email: document.getElementById('email').value,
-        message: document.getElementById('message').value
+        from_name: document.getElementById('name').value,
+        to_name: 'RL Electronics',
+        message: document.getElementById('message').value,
+        from_email: document.getElementById('email').value,
+        to_email: '987825@win.edu.au',
       };
-  
-      emailjs.send(serviceID, templateID, templateParams)
-        .then(function(response) {
-          console.log('SUCCESS!', response.status, response.text);
-          submitButton.textContent = 'Success!';  // Change the button text to "Success"
-          alert('Your message has been sent!');
-          
-          // Reset the form and button text after 3 seconds
-          setTimeout(function() {
-            submitButton.textContent = 'Submit';  // Change the button text back to "Submit"
-            document.getElementById('contact-form').reset();  // Clear form
-          }, 3000);
-        }, function(error) {
-          console.error('FAILED...', error);
-          submitButton.textContent = 'Submit';  // Change the button text back to "Submit" on failure
-          alert('Oops! Something went wrong, please try again.');
+
+      emailjs.send("service_4akq5we","template_nqtpsw6",{
+        from_name: "Kinley Rabgay",
+        to_name: "RL Electronics",
+        message: "Testing the email",
+        reply_to: "fsd.rabgay@gmail.com",
         });
+          
+      // emailjs.send(serviceID, templateID, templateParams)
+      //   .then(function(response) {
+      //     console.log('SUCCESS!', response.status, response.text);
+      //     submitButton.textContent = 'Success!';  // Change the button text to "Success"
+      //     alert('Your message has been sent!');
+          
+      //     // Reset the form and button text after 3 seconds
+      //     setTimeout(function() {
+      //       submitButton.textContent = 'Submit';  // Change the button text back to "Submit"
+      //       document.getElementById('contact-form').reset();  // Clear form
+      //     }, 3000);
+      //   }, function(error) {
+      //     console.error('FAILED...', error);
+      //     submitButton.textContent = 'Submit';  // Change the button text back to "Submit" on failure
+      //     alert('Oops! Something went wrong, please try again.');
+      //   });
     });
   </script>
 </body>
