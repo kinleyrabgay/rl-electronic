@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us</title>
+  <link rel="stylesheet" href="../style.css" />
+
+  <!-- Script -->
+  <script>
+    // Load the header component
+    fetch('/components/header.html')
+      .then(response => response.text())
+      .then(data => {
+          document.getElementById('header-container').innerHTML = data;
+      })
+      .catch(error => console.error('Error loading header:', error));
+
+    // Load the footer component
+    fetch('/components/footer.html')
+      .then(response => response.text())
+      .then(data => {
+          document.getElementById('footer-container').innerHTML = data;
+      })
+      .catch(error => console.error('Error loading footer:', error));
+  </script>
+</head>
+<body>
+  <!-- Header -->
+  <header id="header-container"></header>
+
+  <main class="about-us">
+    <div class="breadcum">
+      <a href="/index.html">HOME</a> / <a href="/about-us.html">ABOUT US</a>
+    </div>
+
+    <div class="about-us__header">
+      <p class="about-us__header-title">
+        <span class="black-text">We Power </span>
+        <span class="gradient-text">Electronics</span>
+        <span class="black-text"> for Billions</span>
+      </p>
+
+      <p class="about-us__header-description">
+        At RLElectronics, we believe in the transformative power of technology. Based in the heart of innovation, we specialize in providing cutting-edge electronic solutions tailored to meet the unique needs of businesses and consumers alike. Our commitment to quality and excellence drives us to continuously enhance our product offerings, ensuring that we remain at the forefront of the industry. With a global reach and a passion for sustainability, we empower our clients to harness the full potential of technology while fostering a greener future.
+      </p>
+    </div>
+
+    <div class="about-us__vision">
+      <p class="about-us__vision-title gradient-text">OUR SHARED VISION</p>
+      <p class="about-us__vision-description">
+        <span class="black-text">Components that Empower RLElectronics to </span>
+        <span class="gradient-text">Provide World Class Services</span>
+      </p>
+
+      <div class="about-us__vision-stats">
+        <div class="about-us__vision-stat">
+          <p class="about-us__vision-stat-title">GLOBAL TEAM</p>
+          <p class="about-us__vision-stat-description">200+ Experts</p>
+        </div>
+        <div class="about-us__vision-stat">
+          <p class="about-us__vision-stat-title">YEARS IN BUSINESS</p>
+          <p class="about-us__vision-stat-description">15 Years</p>
+        </div>
+        <div class="about-us__vision-stat">
+          <p class="about-us__vision-stat-title">OFFICES</p>
+          <p class="about-us__vision-stat-description">10 Locations</p>
+        </div>
+        <div class="about-us__vision-stat">
+          <p class="about-us__vision-stat-title">CLIENTS</p>
+          <p class="about-us__vision-stat-description">500+ Customers</p>
+        </div>
+        <div class="about-us__vision-stat">
+          <p class="about-us__vision-stat-title">PRODUCTS</p>
+          <p class="about-us__vision-stat-description">300+ Products</p>
+        </div>
+        <div class="about-us__vision-stat">
+          <p class="about-us__vision-stat-title">AWARDS</p>
+          <p class="about-us__vision-stat-description">5 Awards</p>
+        </div>
+        <div class="about-us__vision-stat">
+          <p class="about-us__vision-stat-title">PARTNERSHIPS</p>
+          <p class="about-us__vision-stat-description">50+ Brands</p>
+        </div>
+        <div class="about-us__vision-stat">
+          <p class="about-us__vision-stat-title">CUSTOMER SUPPORT</p>
+          <p class="about-us__vision-stat-description">24/7 Support</p>
+        </div>
+      </div>
+
+      <div class="about-us__leadership">
+        <p class="about-us__leadership-title black-text">Leadership Team</p>
+        <div class="about-us__leadership-cards">
+          <div class="about-us__leadership-card">
+            <img src="assets/category/camera.png" alt="team" class="about-us__leadership-image" />
+            <div class="about-us__leadership-info">
+              <p class="about-us__leadership-name">Rinzin Lhamo</p>
+              <p class="about-us__leadership-position">CEO & Founder</p>
+            </div>
+          </div>
+          <div class="about-us__leadership-card">
+            <img src="assets/category/camera.png" alt="team" class="about-us__leadership-image" />
+            <div class="about-us__leadership-info">
+              <p class="about-us__leadership-name">John Doe</p>
+              <p class="about-us__leadership-position">CEO</p>
+            </div>
+          </div>
+          <div class="about-us__leadership-card">
+            <img src="assets/category/camera.png" alt="team" class="about-us__leadership-image" />
+            <div class="about-us__leadership-info">
+              <p class="about-us__leadership-name">John Doe</p>
+              <p class="about-us__leadership-position">CEO</p>
+            </div>
+          </div>
+          <div class="about-us__leadership-card">
+            <img src="assets/category/camera.png" alt="team" class="about-us__leadership-image" />
+            <div class="about-us__leadership-info">
+              <p class="about-us__leadership-name">John Doe</p>
+              <p class="about-us__leadership-position">CEO</p>
+            </div>
+          </div>
+          <div class="about-us__leadership-card">
+            <img src="assets/category/camera.png" alt="team" class="about-us__leadership-image" />
+            <div class="about-us__leadership-info">
+              <p class="about-us__leadership-name">John Doe</p>
+              <p class="about-us__leadership-position">CEO</p>
+            </div>
+          </div>
+          <div class="about-us__leadership-card">
+            <img src="assets/category/camera.png" alt="team" class="about-us__leadership-image" />
+            <div class="about-us__leadership-info">
+              <p class="about-us__leadership-name">John Doe</p>
+              <p class="about-us__leadership-position">CEO</p>
+            </div>
+          </div>
+          <div class="about-us__leadership-card">
+            <img src="assets/category/camera.png" alt="team" class="about-us__leadership-image" />
+            <div class="about-us__leadership-info">
+              <p class="about-us__leadership-name">John Doe</p>
+              <p class="about-us__leadership-position">CEO</p>
+            </div>
+          </div>
+          <div class="about-us__leadership-card">
+            <img src="assets/category/camera.png" alt="team" class="about-us__leadership-image" />
+            <div class="about-us__leadership-info">
+              <p class="about-us__leadership-name">John Doe</p>
+              <p class="about-us__leadership-position">CEO</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer id="footer-container"></footer>
+</body>
+</html>

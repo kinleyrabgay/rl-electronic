@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Details Page</title>
+  <link rel="stylesheet" href="../style.css" />
+  <script src="new-arrivals.js"></script>
+  <script>
+    // Load the header component
+    fetch('/components/header.html')
+      .then((response) => response.text())
+      .then((data) => {
+        document.getElementById('header-container').innerHTML = data;
+      })
+      .catch((error) => console.error('Error loading header:', error));
+
+    // Load the footer component
+    fetch('/components/footer.html')
+      .then((response) => response.text())
+      .then((data) => {
+        document.getElementById('footer-container').innerHTML = data;
+      })
+      .catch((error) => console.error('Error loading footer:', error));
+
+    window.onload = function () {
+      const url = new URL(document.location.href);
+      const title = url.searchParams.get('title');
+      const brand = url.searchParams.get('brand');
+      const imgSrc = url.searchParams.get('imgSrc');
+      const description = url.searchParams.get('description');
+      const price = url.searchParams.get('price');
+      const rating = url.searchParams.get('rating');
+
+      // Set the image source dynamically
+      document.getElementById('product-image').src = imgSrc;
+
+      // Optionally, you can set other details in the page
+      document.getElementById('product-title').textContent = title;
+      document.getElementById('product-brand').textContent = brand;
+      document.getElementById('product-description').textContent =
+        description;
+      document.getElementById('product-price').textContent = price;
+      document.getElementById('product-rating').textContent = rating;
+    };
+  </script>
+</head>
+
+<body>
+  <!-- Header -->
+  <header id="header-container"></header>
+
+  <main class="faq-container">
+    <div class="breadcum">
+      <a href="/index.html">HOME</a> / <a href="/detail.html">DETAILS</a>
+    </div>
+
+    <div class="detail-container">
+      <div class="detail-container__header">
+        <div class="detail-container__header__img">
+          <img id="product-image" alt="product" />
+        </div>
+        <div class="detail-container__header__info">
+          <h1 id="product-title"></h1>
+          <p id="product-description"></p>
+          <p id="product-brand"></p>
+          <p id="product-price"></p>
+          <p id="product-rating"></p>
+
+          <p class="buy-btn">Add to Cart</p>
+        </div>
+      </div>
+
+      <div class="detail-container__recommend">
+        <p>YOU MAY ALSO LIKE</p>
+        <div class="products__container">
+          <div class="container__products__items-suggestion"></div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer id="footer-container"></footer>
+</body>
+
+</html>

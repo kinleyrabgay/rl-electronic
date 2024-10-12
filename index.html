@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RL Electronics</title>
+  <!-- External Styles -->
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="carousel.css" />
+  <script>
+    // Load the header component
+    fetch('components/header.html')
+      .then((response) => response.text())
+      .then((data) => {
+        document.getElementById('header-container').innerHTML = data;
+      })
+      .catch((error) => console.error('Error loading header:', error));
+
+    // Load the footer component
+    fetch('components/footer.html')
+      .then((response) => response.text())
+      .then((data) => {
+        document.getElementById('footer-container').innerHTML = data;
+      })
+      .catch((error) => console.error('Error loading footer:', error));
+
+    // Load the banner component
+    fetch('components/banner.html')
+      .then((response) => response.text())
+      .then((data) => {
+        document.getElementById('banner-container').innerHTML = data;
+      })
+      .catch((error) => console.error('Error loading footer:', error));
+
+    // Redirect to details
+    function redirectToDetails(
+      title,
+      brand,
+      imgSrc,
+      description,
+      price,
+      rating
+    ) {
+      const url = `/detail.html?title=${encodeURIComponent(
+        title
+      )}&brand=${encodeURIComponent(brand)}&imgSrc=${encodeURIComponent(
+        imgSrc
+      )}&description=${encodeURIComponent(
+        description
+      )}&price=${encodeURIComponent(price)}&rating=${encodeURIComponent(
+        rating
+      )}`;
+      location.href = url;
+    }
+  </script>
+</head>
+
+<body>
+  <header id="header-container"></header>
+
+  <main class="main-container">
+    <div class="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item carousel-active">
+          <div class="carousel-caption">
+            <h3>iPhone 15 Pro Max</h3>
+            <p>The iPhone 15 Pro Max features an A17 Pro chip, a stunning Super Retina XDR display, and an improved
+              camera system with advanced computational photography.</p>
+            <a href="javascript:void(0)" class="button"
+              onclick="redirectToDetails('iPhone 15 Pro Max', 'Apple', '/assets/phones/iphone_15_pro.png', 'The iPhone 15 Pro Max features an A17 Pro chip, a stunning Super Retina XDR display, and an improved camera system with advanced computational photography.', '$999', '4.5')">View
+              Details</a>
+          </div>
+          <img src="/assets/phones/iphone_15_pro.png" alt="Product 1" />
+        </div>
+        <div class="carousel-item">
+          <div class="carousel-caption">
+            <h3>Samsung Galaxy S24</h3>
+            <p>The Samsung Galaxy S24 is a stylish and modern phone with a stunning 6.7-inch Super AMOLED display.</p>
+            <a href="javascript:void(0)" class="button"
+              onclick="redirectToDetails('Samsung Galaxy S24', 'Samsung', '/assets/phones/samsung_galaxy_s24.png', 'The Samsung Galaxy S24 is a stylish and modern phone with a stunning 6.7-inch Super AMOLED display.', '$899', '4.6')">View
+              Details</a>
+          </div>
+          <img src="/assets/phones/samsung_galaxy_s24.png" alt="Product 2" />
+        </div>
+        <div class="carousel-item">
+          <div class="carousel-caption">
+            <h3>Samsung Z Flip 5</h3>
+            <p>The Samsung Z Flip 5 is a stylish and modern phone with a stunning 6.7-inch Super AMOLED display.</p>
+            <a href="javascript:void(0)" class="button"
+              onclick="redirectToDetails('Samsung Z Flip 5', 'Samsung', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwIMzA9Zo48uDurkn9-AxzF_fhktefJTi5Yg&s', 'The Samsung Z Flip 5 is a stylish and modern phone with a stunning 6.7-inch Super AMOLED display.', '$999', '4.5')">View
+              Details</a>
+          </div>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwIMzA9Zo48uDurkn9-AxzF_fhktefJTi5Yg&s"
+            alt="Product 3" />
+        </div>
+      </div>
+      <button class="carousel-control prev" onclick="prevSlide()">❮</button>
+      <button class="carousel-control next" onclick="nextSlide()">❯</button>
+    </div>
+
+    <div class="categories">
+      <p>BROWSE BY CATEGORIES</p>
+      <div class="categories__container">
+        <div role="button" onclick="location.href='#products';" class="categories__item">
+          <img src="assets/category/accessories.png" alt="Accessories" class="categories__icon" />
+          <p class="categories__title">Accessories</p>
+        </div>
+        <div role="button" onclick="location.href='#products';" class="categories__item">
+          <img src="assets/category/camera.png" alt="Cameras" class="categories__icon" />
+          <p class="categories__title">Cameras</p>
+        </div>
+        <div role="button" onclick="location.href='#products';" class="categories__item">
+          <img src="assets/category/laptop.png" alt="Laptop" class="categories__icon" />
+          <p class="categories__title">Laptop</p>
+        </div>
+        <div role="button" onclick="location.href='#products';" class="categories__item">
+          <img src="assets/category/smart-phone.png" alt="Smart Phone" class="categories__icon" />
+          <p class="categories__title">Smart Phone</p>
+        </div>
+        <div role="button" onclick="location.href='#products';" class="categories__item">
+          <img src="assets/category/camera.png" alt="Gaming" class="categories__icon" />
+          <p class="categories__title">Gaming</p>
+        </div>
+        <div role="button" onclick="location.href='#products';" class="categories__item">
+          <img src="assets/category/smart-watch.png" alt="Smart Watch" class="categories__icon" />
+          <p class="categories__title">Smart Watch</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="products">
+      <p>NEW PRODUCTS</p>
+      <div class="products__container">
+        <div role="button" class="products__item"
+          onclick="redirectToDetails('MacBook Pro M3 Pro', 'Apple', '/assets/new-arrival/macbook.png', 'The MacBook Pro M3 Pro boasts impressive performance with the M3 Pro chip, long battery life, and a vibrant Retina display, ideal for professionals.', '$799', '4.7')">
+          <img src="/assets/new-arrival/macbook.png" alt="MacBook Pro M3 Pro" class="products__icon" />
+          <p class="products__title">MacBook Pro M3 Pro</p>
+          <p class="products__description">
+            The MacBook Pro M3 Pro offers incredible performance, long...
+          </p>
+          <div class="products__price">
+            <p>$799</p>
+            <a>⭐️ 4.7</a>
+          </div>
+        </div>
+        <div role="button" class="products__item"
+          onclick="redirectToDetails('Samsung Galaxy S24', 'Samsung', '/assets/phones/samsung_galaxy_s24.png', 'The Samsung Galaxy S24 features a powerful Snapdragon processor, high-quality camera system, and a dynamic AMOLED display for stunning visuals.', '$899', '4.6')">
+          <img src="/assets/phones/samsung_galaxy_s24.png" alt="Samsung Galaxy S24" class="products__icon" />
+          <p class="products__title">Samsung Galaxy S24</p>
+          <p class="products__description">
+            The Galaxy S24 features a Snapdragon processor and...
+          </p>
+          <div class="products__price">
+            <p>$899</p>
+            <a>⭐️ 4.6</a>
+          </div>
+        </div>
+        <div role="button" class="products__item"
+          onclick="redirectToDetails('iPhone 15 Pro Max', 'Apple', '/assets/phones/iphone_15_pro.png', 'The iPhone 15 Pro Max features an A17 Pro chip, a stunning Super Retina XDR display, and an improved camera system with advanced computational photography.', '$999', '4.5')">
+          <img src="assets/phones/iphone_15_pro.png" alt="iPhone 15 Pro Max" class="products__icon" />
+          <p class="products__title">iPhone 15 Pro Max</p>
+          <p class="products__description">
+            The iPhone 15 Pro Max features an A17 Pro chip...
+          </p>
+          <div class="products__price">
+            <p>$999</p>
+            <a>⭐️ 4.5</a>
+          </div>
+        </div>
+        <div role="button" class="products__item"
+          onclick="redirectToDetails('Lenovo ThinkPad X1', 'Lenovo', '/assets/laptops/lenovo_thinkpad_x1.png', 'The Lenovo ThinkPad X1 is designed for professionals with its lightweight design, powerful performance, and robust security features.', '$1299', '4.8')">
+          <img src="/assets/laptops/lenovo_thinkpad_x1.png" alt="Lenovo ThinkPad X1" class="products__icon" />
+          <p class="products__title">Lenovo ThinkPad X1</p>
+          <p class="products__description">
+            The ThinkPad X1 offers a lightweight design, powerful...
+          </p>
+          <div class="products__price">
+            <p>$1299</p>
+            <a>⭐️ 4.8</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="products">
+      <p>BEST SELLERS</p>
+      <div class="products__container">
+        <div role="button" class="products__item"
+          onclick="redirectToDetails('iPhone 15 Pro Max', 'Apple', '/assets/phones/iphone_15_pro.png', 'The iPhone 15 Pro Max has been a top seller due to its powerful A17 Pro chip, impressive camera capabilities, and premium build quality.', '$999', '4.5')">
+          <img src="/assets/phones/iphone_15_pro.png" alt="iPhone 15 Pro Max" class="products__icon" />
+          <p class="products__title">iPhone 15 Pro Max</p>
+          <p class="products__description">
+            The iPhone 15 Pro Max is popular for...
+          </p>
+          <div class="products__price">
+            <p>$999</p>
+            <a>⭐️ 4.5</a>
+          </div>
+        </div>
+        <div role="button" class="products__item"
+          onclick="redirectToDetails('MacBook Pro M3 Pro', 'Apple', '/assets/laptops/macbook_m3_pro.png', 'The MacBook Pro M3 Pro is favored by users for its performance and sleek design, making it ideal for creative professionals.', '$799', '4.7')">
+          <img src="/assets/laptops/macbook_m3_pro.png" alt="MacBook Pro M3 Pro" class="products__icon" />
+          <p class="products__title">MacBook Pro M3 Pro</p>
+          <p class="products__description">
+            The MacBook Pro M3 Pro is loved for its performance...
+          </p>
+          <div class="products__price">
+            <p>$799</p>
+            <a>⭐️ 4.7</a>
+          </div>
+        </div>
+        <div role="button" class="products__item"
+          onclick="redirectToDetails('Lenovo ThinkPad X1', 'Lenovo', '/assets/laptops/lenovo_thinkpad_x1.png', 'The Lenovo ThinkPad X1 is a preferred choice for professionals due to its durability, performance, and enterprise security features.', '$1299', '4.8')">
+          <img src="/assets/laptops/lenovo_thinkpad_x1.png" alt="Lenovo ThinkPad X1" class="products__icon" />
+          <p class="products__title">Lenovo ThinkPad X1</p>
+          <p class="products__description">
+            The ThinkPad X1 is preferred for its durability and...
+          </p>
+          <div class="products__price">
+            <p>$1299</p>
+            <a>⭐️ 4.8</a>
+          </div>
+        </div>
+        <div role="button" class="products__item"
+          onclick="redirectToDetails('Samsung Galaxy S24', 'Samsung', '/assets/phones/samsung_galaxy_s24.png', 'The Galaxy S24 is a best-seller with its exceptional camera quality, sleek design, and smooth performance.', '$899', '4.6')">
+          <img src="/assets/phones/samsung_galaxy_s24.png" alt="Samsung Galaxy S24" class="products__icon" />
+          <p class="products__title">Samsung Galaxy S24</p>
+          <p class="products__description">
+            The Galaxy S24 stands out with its camera quality, sleek...
+          </p>
+          <div class="products__price">
+            <p>$899</p>
+            <a>⭐️ 4.6</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="top-brands">
+      <p>TOP BRANDS</p>
+      <!-- Top Brands content will be inserted here -->
+      <div class="top-brands__item">
+        <img src="assets/top-brands/sony.png" alt="Sony" class="top-brands__icon" />
+        <img src="assets/top-brands/samsung.png" alt="Samsung" class="top-brands__icon" />
+        <img src="assets/top-brands/apple.png" alt="Apple" class="top-brands__icon" />
+        <img src="assets/top-brands/canon.png" alt="Canon" class="top-brands__icon" />
+        <img src="assets/top-brands/lenovo.png" alt="lenovo" class="top-brands__icon" />
+        <img src="assets/top-brands/huawai.png" alt="Huawai" class="top-brands__icon" />
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer id="footer-container"></footer>
+
+  <!-- Script at the end of the body -->
+  <script src="script.js" defer></script>
+</body>
+
+</html>

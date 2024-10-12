@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FAQ Page</title>
+    <link rel="stylesheet" href="../style.css" />
+    <!-- Script -->
+    <script src="script.js"></script>
+    <script src="constant.js"></script>
+    <script>
+      // Load the header component
+      fetch('/components/header.html')
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById('header-container').innerHTML = data;
+        })
+        .catch((error) => console.error('Error loading header:', error));
+
+      // Load the footer component
+      fetch('/components/footer.html')
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById('footer-container').innerHTML = data;
+        })
+        .catch((error) => console.error('Error loading footer:', error));
+    </script>
+  </head>
+  <body>
+    <!-- Header -->
+    <header id="header-container"></header>
+
+    <main class="faq-container">
+      <div class="breadcum">
+        <a href="/index.html">HOME</a> / <a href="/faq.html">FAQ</a>
+      </div>
+
+      <div class="faq__container-top">
+        <h2>What are some frequently asked questions?</h2>
+        <div></div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer id="footer-container"></footer>
+  </body>
+</html>

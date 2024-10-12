@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accessories Page</title>
+  <link rel="stylesheet" href="../style.css" />
+
+  <!-- Script -->
+  <script>
+    // Load the header component
+    fetch('/components/header.html')
+      .then(response => response.text())
+      .then(data => {
+          document.getElementById('header-container').innerHTML = data;
+      })
+      .catch(error => console.error('Error loading header:', error));
+
+    // Load the footer component
+    fetch('/components/footer.html')
+      .then(response => response.text())
+      .then(data => {
+          document.getElementById('footer-container').innerHTML = data;
+      })
+      .catch(error => console.error('Error loading footer:', error));
+  </script>
+</head>
+<body>
+  <!-- Header -->
+  <header id="header-container"></header>
+
+  <main class="accessories-container">
+    <div class="breadcum">
+      <a href="/index.html">HOME</a> / <a href="/products/accessories.html">ACCESSORIES</a>
+    </div>
+    <div class="container__products">
+      <div class="container__products__items">
+        <div role="button" onclick="redirectToDetails('Samsung Galaxy Buds Live', 'Samsung', '/assets/accessories/samsung_galaxy_buds_live.png', 'True wireless earbuds with active noise cancellation.', 169, 4.5);" class="container__products__item">
+          <img src="/assets/accessories/samsung_galaxy_buds_live.png" alt="Samsung Galaxy Buds Live" class="products__icon">
+          <p class="products__title">Samsung Galaxy Buds Live</p>
+          <p class="products__description">True wireless earbuds with active noise cancellation.</p>
+          <div class="products__price">
+            <p>$169</p>
+            <a>⭐️ 4.5</a>
+          </div>
+        </div>
+        <div role="button" onclick="redirectToDetails('Samsung Galaxy Watch 4', 'Samsung', '/assets/watches/samsung_galaxy_watch_4.png', 'Health-focused smartwatch with ECG and fitness tracking.', 249, 4.7);" class="container__products__item">
+          <img src="/assets/watches/samsung_galaxy_watch_4.png" alt="Samsung Galaxy Watch 4" class="products__icon">
+          <p class="products__title">Samsung Galaxy Watch 4</p>
+          <p class="products__description">Health-focused smartwatch with ECG and fitness tracking.</p>
+          <div class="products__price">
+            <p>$249</p>
+            <a>⭐️ 4.7</a>
+          </div>
+        </div>
+        <div role="button" onclick="redirectToDetails('Samsung Galaxy SmartTag', 'Samsung', '/assets/accessories/samsung_galaxy_smart_tag.png', 'Compact Bluetooth tracker for finding lost items easily.', 29, 4.4);" class="container__products__item">
+          <img src="/assets/accessories/samsung_galaxy_smart_tag.png" alt="Samsung Galaxy SmartTag" class="products__icon">
+          <p class="products__title">Samsung Galaxy SmartTag</p>
+          <p class="products__description">Compact Bluetooth tracker for finding lost items easily.</p>
+          <div class="products__price">
+            <p>$29</p>
+            <a>⭐️ 4.4</a>
+          </div>
+        </div>
+        <div role="button" onclick="redirectToDetails('Samsung Wireless Charger', 'Samsung', '/assets/accessories/samsung_wireless_charger.png', 'Fast wireless charging pad for all Qi-enabled devices.', 39, 4.6);" class="container__products__item">
+          <img src="/assets/accessories/samsung_wireless_charger.png" alt="Samsung Wireless Charger" class="products__icon">
+          <p class="products__title">Samsung Wireless Charger</p>
+          <p class="products__description">Fast wireless charging pad for all Qi-enabled devices.</p>
+          <div class="products__price">
+            <p>$39</p>
+            <a>⭐️ 4.6</a>
+          </div>
+        </div>
+        <div role="button" onclick="redirectToDetails('Samsung Type-C Adapter', 'Samsung', '/assets/accessories/samsung_type_c_adapter.png', 'USB Type-C to HDMI adapter for connecting to external displays.', 49, 4.3);" class="container__products__item">
+          <img src="/assets/accessories/samsung_type_c_adapter.png" alt="Samsung Type-C Adapter" class="products__icon">
+          <p class="products__title">Samsung Type-C Adapter</p>
+          <p class="products__description">USB Type-C to HDMI adapter for connecting to external displays.</p>
+          <div class="products__price">
+            <p>$49</p>
+            <a>⭐️ 4.3</a>
+          </div>
+        </div>
+        <div role="button" onclick="redirectToDetails('Samsung Galaxy Buds Pro', 'Samsung', '/assets/accessories/samsung_galaxy_buds_pro.png', 'High-quality earbuds with intelligent active noise canceling.', 199, 4.8);" class="container__products__item">
+          <img src="/assets/accessories/samsung_galaxy_buds_pro.png" alt="Samsung Galaxy Buds Pro" class="products__icon">
+          <p class="products__title">Samsung Galaxy Buds Pro</p>
+          <p class="products__description">High-quality earbuds with intelligent active noise canceling.</p>
+          <div class="products__price">
+            <p>$199</p>
+            <a>⭐️ 4.8</a>
+          </div>
+        </div>
+        <div role="button" onclick="redirectToDetails('Samsung Gear IconX', 'Samsung', '/assets/accessories/samsung_gear_iconx.png', 'Cord-free fitness earbuds with built-in storage and tracking.', 179, 4.2);" class="container__products__item">
+          <img src="/assets/accessories/samsung_gear_iconx.png" alt="Samsung Gear IconX" class="products__icon">
+          <p class="products__title">Samsung Gear IconX</p>
+          <p class="products__description">Cord-free fitness earbuds with built-in storage and tracking.</p>
+          <div class="products__price">
+            <p>$179</p>
+            <a>⭐️ 4.2</a>
+          </div>
+        </div>
+        <div role="button" onclick="redirectToDetails('Samsung DeX Station', 'Samsung', '/assets/accessories/samsung_deX_station.png', 'Turn your phone into a desktop experience with DeX Station.', 99, 4.5);" class="container__products__item">
+          <img src="/assets/accessories/samsung_deX_station.png" alt="Samsung DeX Station" class="products__icon">
+          <p class="products__title">Samsung DeX Station</p>
+          <p class="products__description">Turn your phone into a desktop experience with DeX Station.</p>
+          <div class="products__price">
+            <p>$99</p>
+            <a>⭐️ 4.5</a>
+          </div>
+        </div>
+        <div role="button" onclick="redirectToDetails('Samsung Smart View Remote', 'Samsung', '/assets/accessories/samsung_smart_view_remote.png', 'Control your smart devices with a universal Smart View Remote.', 49, 4.3);" class="container__products__item">
+          <img src="/assets/accessories/samsung_smart_view_remote.png" alt="Samsung Smart View Remote" class="products__icon">
+          <p class="products__title">Samsung Smart View Remote</p>
+          <p class="products__description">Control your smart devices with a universal Smart View Remote.</p>
+          <div class="products__price">
+            <p>$49</p>
+            <a>⭐️ 4.3</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer id="footer-container"></footer>
+  <script src="../script.js"></script>
+</body>
+</html>
