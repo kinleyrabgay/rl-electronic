@@ -6,15 +6,8 @@
   <title>Contact Page</title>
   <link rel="stylesheet" href="../style.css" />
 
-  <!-- EmailJS SDK -->
-  <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-  <script type="text/javascript">
-    (function() {
-      emailjs.init({
-        publicKey: "b6nWOZy-cxyFa51ce",
-      });
-    })();
-  </script> -->
+  <!-- SMTPJS -->
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
 
   <!-- Load Components -->
   <script>
@@ -51,8 +44,8 @@
   <!-- Main -->
   <main class="contact-container">
 
-    <!-- Breadcum -->
-    <div class="breadcum">
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
       <a href="/index.html">HOME</a> / <a href="/contact.html">CONTACT US</a>
     </div>
 
@@ -124,7 +117,7 @@
   <!-- Footer -->
   <footer id="footer-container"></footer>
 
-  <!-- EmailJS Script to Send Email -->
+  <!-- SMTPJS Script to Send Email -->
   <script>
     document.getElementById('contact-form').addEventListener('submit', function(event) {
       event.preventDefault();
@@ -133,41 +126,33 @@
       const submitButton = document.querySelector('.form__submit-btn');
       submitButton.textContent = 'Sending...';  // Change the button text to "Sending..."
   
-      const serviceID = 'service_4akq5we';
-      const templateID = 'template_nqtpsw6';
-  
       // Get form values
-      const templateParams = {
-        from_name: document.getElementById('name').value,
-        to_name: 'RL Electronics',
-        message: document.getElementById('message').value,
-        from_email: document.getElementById('email').value,
-        to_email: '987825@win.edu.au',
-      };
-
-      emailjs.send("service_4akq5we","template_nqtpsw6",{
-        from_name: "Kinley Rabgay",
-        to_name: "RL Electronics",
-        message: "Testing the email",
-        reply_to: "fsd.rabgay@gmail.com",
-        });
-          
-      // emailjs.send(serviceID, templateID, templateParams)
-      //   .then(function(response) {
-      //     console.log('SUCCESS!', response.status, response.text);
-      //     submitButton.textContent = 'Success!';  // Change the button text to "Success"
-      //     alert('Your message has been sent!');
-          
-      //     // Reset the form and button text after 3 seconds
-      //     setTimeout(function() {
-      //       submitButton.textContent = 'Submit';  // Change the button text back to "Submit"
-      //       document.getElementById('contact-form').reset();  // Clear form
-      //     }, 3000);
-      //   }, function(error) {
-      //     console.error('FAILED...', error);
-      //     submitButton.textContent = 'Submit';  // Change the button text back to "Submit" on failure
-      //     alert('Oops! Something went wrong, please try again.');
-      //   });
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const message = document.getElementById('message').value;
+  
+      // Sending email using SMTPJS
+      Email.send({
+        SecureToken: "a3b0834e-7a11-4903-aac6-2a595adedfbb", // Your secure SMTP token
+        To: '987825@win.edu.au',
+        From: email,
+        Subject: `New Message from ${name}`,
+        Body: `<p>Name: ${name}</p><p>Email: ${email}</p><p>Message: ${message}</p>`
+      }).then(function(response) {
+        console.log('SUCCESS!', response);
+        submitButton.textContent = 'Success!';  // Change the button text to "Success"
+        alert('Your message has been sent!');
+        
+        // Reset the form and button text after 3 seconds
+        setTimeout(function() {
+          submitButton.textContent = 'Submit';  // Change the button text back to "Submit"
+          document.getElementById('contact-form').reset();  // Clear form
+        }, 3000);
+      }).catch(function(error) {
+        console.error('FAILED...', error);
+        submitButton.textContent = 'Submit';  // Change the button text back to "Submit" on failure
+        alert('Oops! Something went wrong, please try again.');
+      });
     });
   </script>
 </body>
