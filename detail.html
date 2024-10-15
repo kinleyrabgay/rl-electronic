@@ -5,9 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Details Page</title>
-  <link rel="stylesheet" href="./css/style.css" />
-  <script src="./js/new-arrivals.js"></script>
-
+  <link rel="stylesheet" href="css/style.css" />
   <script>
     window.onload = function () {
       const url = new URL(document.location.href);
@@ -63,19 +61,19 @@
               <div role="button"
                 onclick="redirectToDetails('MacBook Pro M3 Pro', 'Apple', 'assets/new-arrival/macbook.png', 'The MacBook Pro M3 Pro boasts impressive performance with the M3 Pro chip, long battery life, and a vibrant Retina display, ideal for professionals.', '$799', '4.7')"
                 class="categories__item">
-                <img src="/assets/new-arrival/macbook.png" alt="Accessories" class="categories__icon">
+                <img src="assets/new-arrival/macbook.png" alt="macbook" class="categories__icon">
                 <p class="categories__title">MacBook Pro M3 Pro</p>
               </div>
               <div role="button"
                 onclick="redirectToDetails('iPhone 15 Pro Max', 'Apple', 'assets/phones/iphone_15_pro.png', 'The iPhone 15 Pro Max features an A17 Pro chip, a stunning Super Retina XDR display, and an improved camera system with advanced computational photography.', '$999', '4.5')"
                 class="categories__item">
-                <img src="/assets/phones/iphone_15_pro.png" alt="Accessories" class="categories__icon">
+                <img src="assets/phones/iphone_15_pro.png" alt="iphone" class="categories__icon">
                 <p class="categories__title">iPhone 15 Pro Max</p>
               </div>
               <div role="button"
                 onclick="redirectToDetails('Samsung Galaxy S24', 'Samsung', 'assets/phones/samsung_galaxy_s24.png', 'The Samsung Galaxy S24 features a powerful Snapdragon processor, high-quality camera system, and a dynamic AMOLED display for stunning visuals.', '$899', '4.6')"
                 class="categories__item">
-                <img src="/assets/phones/samsung_galaxy_s24.png" alt="Accessories" class="categories__icon">
+                <img src="assets/phones/samsung_galaxy_s24.png" alt="samsung" class="categories__icon">
                 <p class="categories__title">Samsung Galaxy S24</p>
               </div>
             </div>
@@ -95,19 +93,19 @@
               <div role="button"
                 onclick="redirectToDetails('iPhone 15 Pro Max', 'Apple', 'assets/phones/iphone_15_pro.png', 'The iPhone 15 Pro Max features an A17 Pro chip, a stunning Super Retina XDR display, and an improved camera system with advanced computational photography.', '$999', '4.5')"
                 class="categories__item">
-                <img src="/assets/phones/iphone_15_pro.png" alt="Accessories" class="categories__icon">
+                <img src="assets/phones/iphone_15_pro.png" alt="iphone" class="categories__icon">
                 <p class="categories__title">iPhone 15 Pro Max</p>
               </div>
               <div role="button"
                 onclick="redirectToDetails('MacBook Pro M3 Pro', 'Apple', 'assets/new-arrival/macbook.png', 'The MacBook Pro M3 Pro boasts impressive performance with the M3 Pro chip, long battery life, and a vibrant Retina display, ideal for professionals.', '$799', '4.7')"
                 class="categories__item">
-                <img src="/assets/new-arrival/macbook.png" alt="Accessories" class="categories__icon">
+                <img src="assets/new-arrival/macbook.png" alt="macbook" class="categories__icon">
                 <p class="categories__title">MacBook Pro M3 Pro</p>
               </div>
               <div role="button"
                 onclick="redirectToDetails('Samsung Galaxy S24', 'Samsung', 'assets/phones/samsung_galaxy_s24.png', 'The Samsung Galaxy S24 features a powerful Snapdragon processor, high-quality camera system, and a dynamic AMOLED display for stunning visuals.', '$899', '4.6')"
                 class="categories__item">
-                <img src="/assets/phones/samsung_galaxy_s24.png" alt="Accessories" class="categories__icon">
+                <img src="assets/phones/samsung_galaxy_s24.png" alt="samsung" class="categories__icon">
                 <p class="categories__title">Samsung Galaxy S24</p>
               </div>
             </div>
@@ -157,45 +155,42 @@
         <p>YOU MAY ALSO LIKE</p>
         <div class="products__container">
           <div class="container__products__items-suggestion">
+            <!-- Lenovo ThinkPad X1 Carbon -->
             <div role="button"
-              onclick="redirectToDetails('Apple MacBook Pro 14', 'Apple', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWatxfWIyHYzqLF-Sm3AjdKVNmfhleHHc6dw&s', 'M1 Pro chip, 16GB RAM, 512GB SSD.', 1999, 4.9);"
+              onclick="redirectToDetails('Lenovo ThinkPad X1 Carbon', 'Lenovo', 'assets/laptops/lenovo_thinkpad_x1_carbon.png', 'Intel Core i7, 16GB RAM, 1TB SSD.', 1499, 4.7);"
               class="container__products__item">
-              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWatxfWIyHYzqLF-Sm3AjdKVNmfhleHHc6dw&s"
-                alt="Apple MacBook Pro 14" class="products__icon">
-              <p class="products__title">Apple MacBook Pro 14</p>
-              <p class="products__description">M1 Pro chip, 16GB RAM, 512GB SSD.</p>
+              <img src="assets/laptops/lenovo_thinkpad_x1_carbon.png" alt="Lenovo ThinkPad X1 Carbon"
+                class="products__icon">
+              <p class="products__title">Lenovo ThinkPad X1 Carbon</p>
+              <p class="products__description">Intel Core i7, 16GB RAM, 1TB SSD.</p>
               <div class="products__price">
-                <p>$1,999</p>
-                <a>⭐️ 4.9</a>
-              </div>
-            </div>
-
-            <!-- Samsung Galaxy S21 -->
-            <div role="button"
-              onclick="redirectToDetails('Samsung Galaxy S21', 'Samsung', 'https://cdn.movertix.com/media/catalog/product/cache/image/1200x/s/a/samsung-galaxy-s21-5g-phantom-grey-128gb-and-8gb-ram-sm-g991b_1.jpg', '108MP triple camera, 5G capable.', 799, 4.7);"
-              class="container__products__item">
-              <img
-                src="https://cdn.movertix.com/media/catalog/product/cache/image/1200x/s/a/samsung-galaxy-s21-5g-phantom-grey-128gb-and-8gb-ram-sm-g991b_1.jpg"
-                alt="Samsung Galaxy S21" class="products__icon">
-              <p class="products__title">Samsung Galaxy S21</p>
-              <p class="products__description">108MP triple camera, 5G capable.</p>
-              <div class="products__price">
-                <p>$799</p>
+                <p>$1,499</p>
                 <a>⭐️ 4.7</a>
               </div>
             </div>
 
-            <!-- Lenovo ThinkPad X1 Carbon -->
             <div role="button"
-              onclick="redirectToDetails('Lenovo ThinkPad X1 Carbon', 'Lenovo', 'https://m.media-amazon.com/images/I/61b4Q8ScqLL._AC_SL1500_.jpg', 'Intel i5, 14-inch, ultra-light design.', 1599, 4.9);"
+              onclick="redirectToDetails('Apple iPhone 13', 'Apple', 'assets/mobile/iphone_13.png', '6.1-inch display, A15 Bionic chip, Dual camera.', 799, 4.8);"
               class="container__products__item">
-              <img src="https://m.media-amazon.com/images/I/61b4Q8ScqLL._AC_SL1500_.jpg" alt="Lenovo ThinkPad X1 Carbon"
-                class="products__icon">
-              <p class="products__title">Lenovo ThinkPad X1 Carbon</p>
-              <p class="products__description">Intel i5, 14-inch, ultra-light design.</p>
+              <img src="assets/mobile/iphone_13.png" alt="Apple iPhone 13" class="products__icon">
+              <p class="products__title">Apple iPhone 13</p>
+              <p class="products__description">6.1-inch display, A15 Bionic chip, Dual camera.</p>
               <div class="products__price">
-                <p>$1,599</p>
-                <a>⭐️ 4.9</a>
+                <p>$799</p>
+                <a>⭐️ 4.8</a>
+              </div>
+            </div>
+
+            <div role="button"
+              onclick="redirectToDetails('Samsung Galaxy Buds Pro', 'Samsung', 'assets/accessories/samsung_galaxy_buds_pro.png', 'High-quality earbuds with intelligent active noise canceling.', 199, 4.8);"
+              class="container__products__item">
+              <img src="assets/accessories/samsung_galaxy_buds_pro.png" alt="Samsung Galaxy Buds Pro"
+                class="products__icon">
+              <p class="products__title">Samsung Galaxy Buds Pro</p>
+              <p class="products__description">High-quality earbuds with intelligent active noise canceling.</p>
+              <div class="products__price">
+                <p>$199</p>
+                <a>⭐️ 4.8</a>
               </div>
             </div>
           </div>
@@ -247,6 +242,6 @@
       &copy; 2024 RlElectronics. All rights reserved.
     </div>
   </footer>
+  <script src="js/script.js"></script>
 </body>
-
 </html>

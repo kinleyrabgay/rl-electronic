@@ -5,35 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mobile Phones Page</title>
-  <link rel="stylesheet" href="./css/style.css" />
-
-  <!-- Script -->
-  <script>
-    // Load the brand category component
-    fetch('/components/brand-category.html')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('brand-category-container').innerHTML = data;
-        setupBrandCategoryClickListeners(); // Set up click listeners after loading
-
-      })
-      .catch(error => console.error('Error loading footer:', error));
-
-    // Function to set up click event listeners
-    function setupBrandCategoryClickListeners() {
-      const brandItems = document.querySelectorAll('.brand-category__item');
-
-      brandItems.forEach(item => {
-        // Trigger logic only on click of the item
-        item.addEventListener('click', function () {
-          // Remove 'active' class from all items
-          brandItems.forEach(i => i.classList.remove('active'));
-          // Add 'active' class to the clicked item
-          this.classList.add('active');
-        });
-      });
-    }
-  </script>
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 
 <body>
@@ -65,21 +37,21 @@
             <div class="dropdown__product-divier"></div>
             <div class="dropdown__product-rside">
               <div role="button"
-                onclick="redirectToDetails('MacBook Pro M3 Pro', 'Apple', '/assets/new-arrival/macbook.png', 'The MacBook Pro M3 Pro boasts impressive performance with the M3 Pro chip, long battery life, and a vibrant Retina display, ideal for professionals.', '$799', '4.7')"
+                onclick="redirectToDetails('MacBook Pro M3 Pro', 'Apple', 'assets/new-arrival/macbook.png', 'The MacBook Pro M3 Pro boasts impressive performance with the M3 Pro chip, long battery life, and a vibrant Retina display, ideal for professionals.', '$799', '4.7')"
                 class="categories__item">
-                <img src="/assets/new-arrival/macbook.png" alt="Accessories" class="categories__icon">
+                <img src="assets/new-arrival/macbook.png" alt="macbook" class="categories__icon">
                 <p class="categories__title">MacBook Pro M3 Pro</p>
               </div>
               <div role="button"
-                onclick="redirectToDetails('iPhone 15 Pro Max', 'Apple', '/assets/phones/iphone_15_pro.png', 'The iPhone 15 Pro Max features an A17 Pro chip, a stunning Super Retina XDR display, and an improved camera system with advanced computational photography.', '$999', '4.5')"
+                onclick="redirectToDetails('iPhone 15 Pro Max', 'Apple', 'assets/phones/iphone_15_pro.png', 'The iPhone 15 Pro Max features an A17 Pro chip, a stunning Super Retina XDR display, and an improved camera system with advanced computational photography.', '$999', '4.5')"
                 class="categories__item">
-                <img src="/assets/phones/iphone_15_pro.png" alt="Accessories" class="categories__icon">
+                <img src="assets/phones/iphone_15_pro.png" alt="iphone" class="categories__icon">
                 <p class="categories__title">iPhone 15 Pro Max</p>
               </div>
               <div role="button"
-                onclick="redirectToDetails('Samsung Galaxy S24', 'Samsung', '/assets/phones/samsung_galaxy_s24.png', 'The Samsung Galaxy S24 features a powerful Snapdragon processor, high-quality camera system, and a dynamic AMOLED display for stunning visuals.', '$899', '4.6')"
+                onclick="redirectToDetails('Samsung Galaxy S24', 'Samsung', 'assets/phones/samsung_galaxy_s24.png', 'The Samsung Galaxy S24 features a powerful Snapdragon processor, high-quality camera system, and a dynamic AMOLED display for stunning visuals.', '$899', '4.6')"
                 class="categories__item">
-                <img src="/assets/phones/samsung_galaxy_s24.png" alt="Accessories" class="categories__icon">
+                <img src="assets/phones/samsung_galaxy_s24.png" alt="samsung" class="categories__icon">
                 <p class="categories__title">Samsung Galaxy S24</p>
               </div>
             </div>
@@ -97,21 +69,21 @@
             <div class="dropdown__product-divier"></div>
             <div class="dropdown__product-rside">
               <div role="button"
-                onclick="redirectToDetails('iPhone 15 Pro Max', 'Apple', '/assets/phones/iphone_15_pro.png', 'The iPhone 15 Pro Max features an A17 Pro chip, a stunning Super Retina XDR display, and an improved camera system with advanced computational photography.', '$999', '4.5')"
+                onclick="redirectToDetails('iPhone 15 Pro Max', 'Apple', 'assets/phones/iphone_15_pro.png', 'The iPhone 15 Pro Max features an A17 Pro chip, a stunning Super Retina XDR display, and an improved camera system with advanced computational photography.', '$999', '4.5')"
                 class="categories__item">
-                <img src="/assets/phones/iphone_15_pro.png" alt="Accessories" class="categories__icon">
+                <img src="assets/phones/iphone_15_pro.png" alt="iphone" class="categories__icon">
                 <p class="categories__title">iPhone 15 Pro Max</p>
               </div>
               <div role="button"
-                onclick="redirectToDetails('MacBook Pro M3 Pro', 'Apple', '/assets/new-arrival/macbook.png', 'The MacBook Pro M3 Pro boasts impressive performance with the M3 Pro chip, long battery life, and a vibrant Retina display, ideal for professionals.', '$799', '4.7')"
+                onclick="redirectToDetails('MacBook Pro M3 Pro', 'Apple', 'assets/new-arrival/macbook.png', 'The MacBook Pro M3 Pro boasts impressive performance with the M3 Pro chip, long battery life, and a vibrant Retina display, ideal for professionals.', '$799', '4.7')"
                 class="categories__item">
-                <img src="/assets/new-arrival/macbook.png" alt="Accessories" class="categories__icon">
+                <img src="assets/new-arrival/macbook.png" alt="macbook" class="categories__icon">
                 <p class="categories__title">MacBook Pro M3 Pro</p>
               </div>
               <div role="button"
-                onclick="redirectToDetails('Samsung Galaxy S24', 'Samsung', '/assets/phones/samsung_galaxy_s24.png', 'The Samsung Galaxy S24 features a powerful Snapdragon processor, high-quality camera system, and a dynamic AMOLED display for stunning visuals.', '$899', '4.6')"
+                onclick="redirectToDetails('Samsung Galaxy S24', 'Samsung', 'assets/phones/samsung_galaxy_s24.png', 'The Samsung Galaxy S24 features a powerful Snapdragon processor, high-quality camera system, and a dynamic AMOLED display for stunning visuals.', '$899', '4.6')"
                 class="categories__item">
-                <img src="/assets/phones/samsung_galaxy_s24.png" alt="Accessories" class="categories__icon">
+                <img src="assets/phones/samsung_galaxy_s24.png" alt="samsung" class="categories__icon">
                 <p class="categories__title">Samsung Galaxy S24</p>
               </div>
             </div>
@@ -130,7 +102,7 @@
       </div>
       <div>
         <button type="submit" class="login-btn">
-          <a href="/login.html">Login</a>
+          <a href="login.html">Login</a>
         </button>
       </div>
     </div>
@@ -140,25 +112,118 @@
     <div class="breadcum">
       <a href="index.html">HOME</a> / <a href="mobile-phone.html">MOBILE PHONES</a>
     </div>
-    <div class="brand-category">
-      <div class="brand-category__item" tabindex="0" data-brand="Apple">
-        <p class="brand-category__title">Apple</p>
-      </div>
-      <div class="brand-category__item" tabindex="0" data-brand="Google">
-        <p class="brand-category__title">Google</p>
-      </div>
-      <div class="brand-category__item" tabindex="0" data-brand="Samsung">
-        <p class="brand-category__title">Samsung</p>
-      </div>
-      <div class="brand-category__item" tabindex="0" data-brand="OnePlus">
-        <p class="brand-category__title">OnePlus</p>
-      </div>
-      <div class="brand-category__item" tabindex="0" data-brand="Oppo">
-        <p class="brand-category__title">Oppo</p>
-      </div>
-    </div>
     <div class="container__products">
-      <div class="container__products__items"></div>
+      <div class="container__products__items">
+        <div class="products__item" role="button"
+          onclick="redirectToDetails('Samsung Galaxy S21', 'Samsung', 'assets/samsung/samsung_galaxy_21.png', '6.2-inch display, Triple camera, Exynos 2100.', 799, 4.7);">
+          <img src="assets/samsung/samsung_galaxy_21.png" alt="Samsung Galaxy S21" class="products__icon">
+          <p class="products__title">Samsung Galaxy S21</p>
+          <p class="products__description">6.2-inch display, Triple camera, Exynos 2100.</p>
+          <div class="products__price">
+            <p>$799</p>
+            <a>⭐️ 4.7</a>
+          </div>
+        </div>
+
+        <div class="products__item" role="button"
+          onclick="redirectToDetails('Apple iPhone 13', 'Apple', 'assets/mobile/iphone_13.png', '6.1-inch display, A15 Bionic chip, Dual camera.', 799, 4.8);">
+          <img src="assets/mobile/iphone_13.png" alt="Apple iPhone 13" class="products__icon">
+          <p class="products__title">Apple iPhone 13</p>
+          <p class="products__description">6.1-inch display, A15 Bionic chip, Dual camera.</p>
+          <div class="products__price">
+            <p>$799</p>
+            <a>⭐️ 4.8</a>
+          </div>
+        </div>
+
+        <div class="products__item" role="button"
+          onclick="redirectToDetails('Google Pixel 5', 'Google', 'assets/mobile/google_pixel_5.png', '6.0-inch display, Snapdragon 765G, Dual camera.', 699, 4.6);">
+          <img src="assets/mobile/google_pixel_5.png" alt="Google Pixel 5" class="products__icon">
+          <p class="products__title">Google Pixel 5</p>
+          <p class="products__description">6.0-inch display, Snapdragon 765G, Dual camera.</p>
+          <div class="products__price">
+            <p>$699</p>
+            <a>⭐️ 4.6</a>
+          </div>
+        </div>
+
+        <div class="products__item" role="button"
+          onclick="redirectToDetails('OnePlus 9', 'OnePlus', 'assets/mobile/oneplus_9.png', '6.55-inch display, Snapdragon 888, Triple camera.', 729, 4.7);">
+          <img src="assets/mobile/oneplus_9.png" alt="OnePlus 9" class="products__icon">
+          <p class="products__title">OnePlus 9</p>
+          <p class="products__description">6.55-inch display, Snapdragon 888, Triple camera.</p>
+          <div class="products__price">
+            <p>$729</p>
+            <a>⭐️ 4.7</a>
+          </div>
+        </div>
+
+        <div class="products__item" role="button"
+          onclick="redirectToDetails('Xiaomi Mi 11', 'Xiaomi', 'assets/mobile/xiaomi_mi_11.png', '6.81-inch display, Snapdragon 888, Triple camera.', 749, 4.8);">
+          <img src="assets/mobile/xiaomi_mi_11.png" alt="Xiaomi Mi 11" class="products__icon">
+          <p class="products__title">Xiaomi Mi 11</p>
+          <p class="products__description">6.81-inch display, Snapdragon 888, Triple camera.</p>
+          <div class="products__price">
+            <p>$749</p>
+            <a>⭐️ 4.8</a>
+          </div>
+        </div>
+
+        <div class="products__item" role="button"
+          onclick="redirectToDetails('Sony Xperia 1 III', 'Sony', 'assets/mobile/sony_xperia_1_lll.png', '6.5-inch 4K display, Snapdragon 888, Triple camera.', 1299, 4.6);">
+          <img src="assets/mobile/sony_xperia_1_lll.png" alt="Sony Xperia 1 III" class="products__icon">
+          <p class="products__title">Sony Xperia 1 III</p>
+          <p class="products__description">6.5-inch 4K display, Snapdragon 888, Triple camera.</p>
+          <div class="products__price">
+            <p>$1,299</p>
+            <a>⭐️ 4.6</a>
+          </div>
+        </div>
+
+        <div class="products__item" role="button"
+          onclick="redirectToDetails('Nokia 8.3 5G', 'Nokia', 'assets/mobile/nokia_8_3_5G.png', '6.81-inch display, Snapdragon 765G, Quad camera.', 699, 4.5);">
+          <img src="assets/mobile/nokia_8_3_5G.png" alt="Nokia 8.3 5G" class="products__icon">
+          <p class="products__title">Nokia 8.3 5G</p>
+          <p class="products__description">6.81-inch display, Snapdragon 765G, Quad camera.</p>
+          <div class="products__price">
+            <p>$699</p>
+            <a>⭐️ 4.5</a>
+          </div>
+        </div>
+
+        <div class="products__item" role="button"
+          onclick="redirectToDetails('Oppo Find X3 Pro', 'Oppo', 'assets/mobile/oppo_find_x3_pro.png', '6.7-inch display, Snapdragon 888, Triple camera.', 1149, 4.9);">
+          <img src="assets/mobile/oppo_find_x3_pro.png" alt="Oppo Find X3 Pro" class="products__icon">
+          <p class="products__title">Oppo Find X3 Pro</p>
+          <p class="products__description">6.7-inch display, Snapdragon 888, Triple camera.</p>
+          <div class="products__price">
+            <p>$1,149</p>
+            <a>⭐️ 4.9</a>
+          </div>
+        </div>
+
+        <div class="products__item" role="button"
+          onclick="redirectToDetails('Realme GT', 'Realme', 'assets/mobile/realme_gt.png', '6.43-inch display, Snapdragon 888, Triple camera.', 499, 4.7);">
+          <img src="assets/mobile/realme_gt.png" alt="Realme GT" class="products__icon">
+          <p class="products__title">Realme GT</p>
+          <p class="products__description">6.43-inch display, Snapdragon 888, Triple camera.</p>
+          <div class="products__price">
+            <p>$499</p>
+            <a>⭐️ 4.7</a>
+          </div>
+        </div>
+
+        <div class="products__item" role="button"
+          onclick="redirectToDetails('Vivo X60 Pro', 'Vivo', 'assets/mobile/vivo_x60_pro.png', '6.56-inch display, Exynos 1080, Triple camera.', 799, 4.6);">
+          <img src="assets/mobile/vivo_x60_pro.png" alt="Vivo X60 Pro" class="products__icon">
+          <p class="products__title">Vivo X60 Pro</p>
+          <p class="products__description">6.56-inch display, Exynos 1080, Triple camera.</p>
+          <div class="products__price">
+            <p>$799</p>
+            <a>⭐️ 4.6</a>
+          </div>
+        </div>
+      </div>
     </div>
   </main>
 
@@ -168,10 +233,10 @@
       <div class="site-footer__section site-footer__company">
         <h1 class="site-footer__title">COMPANY</h1>
         <ul>
-          <li><a href="/about-us.html">ABOUT US</a></li>
+          <li><a href="about-us.html">ABOUT US</a></li>
           <li><a href="contact.html">CONTACT US</a></li>
-          <li><a href="/privacy-policy.html">PRIVACY POLICY</a></li>
-          <li><a href="/terms-condition.html">TERMS & CONDITIONS</a></li>
+          <li><a href="privacy-policy.html">PRIVACY POLICY</a></li>
+          <li><a href="terms-condition.html">TERMS & CONDITIONS</a></li>
         </ul>
       </div>
 
@@ -179,15 +244,15 @@
         <h1 class="site-footer__title">CONTACT</h1>
         <ul>
           <li>
-            <img src="../assets/location.png" alt="location" />
+            <img src="assets/location.png" alt="location" />
             <a href="#">123 Main Street, Australia</a>
           </li>
           <li>
-            <img src="../assets/call-calling.png" alt="phone" />
+            <img src="assets/call-calling.png" alt="phone" />
             <a href="#">+1 (555) 123-4567</a>
           </li>
           <li>
-            <img src="../assets/sms-edit.png" alt="email" />
+            <img src="assets/sms-edit.png" alt="email" />
             <a href="#">RlElectronics@gmail.com</a>
           </li>
         </ul>
@@ -204,7 +269,7 @@
       &copy; 2024 RlElectronics. All rights reserved.
     </div>
   </footer>
-  <script src="./js/mobile.js"></script>
+  <script src="js/script.js"></script>
 </body>
 
 </html>
