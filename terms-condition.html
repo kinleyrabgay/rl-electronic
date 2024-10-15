@@ -1,92 +1,191 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Terms & Conditions</title>
-  <link rel="stylesheet" href="../style.css" />
-
-  <!-- Script -->
-  <script>
-    // Load the header component
-    fetch('/components/header.html')
-      .then(response => response.text())
-      .then(data => {
-          document.getElementById('header-container').innerHTML = data;
-      })
-      .catch(error => console.error('Error loading header:', error));
-
-    // Load the footer component
-    fetch('/components/footer.html')
-      .then(response => response.text())
-      .then(data => {
-          document.getElementById('footer-container').innerHTML = data;
-      })
-      .catch(error => console.error('Error loading footer:', error));
-  </script>
+  <link rel="stylesheet" href="./css/style.css" />
 </head>
+
 <body>
   <!-- Header -->
-  <header id="header-container"></header>
+  <header class="site-header">
+    <div class="site-header__logo">
+      <div class="logo-container">
+        <img src="assets/rlelectronic.png" alt="RL Electronics" width="140" height="50" />
+      </div>
+
+      <div class="menu-toggle" onclick="toggleMenu()">
+        &#9776;
+      </div>
+    </div>
+    <div class="nav-container">
+      <ul>
+        <li>
+          <a href="index.html">HOME</a>
+        </li>
+        <li>
+          <a href="#">PRODUCTS</a>
+          <div class="dropdown__product">
+            <div class="dropdown__product-lside">
+              <a href="mobile-phone.html" class="dropdown__product-title">Mobile Phone</a>
+              <a href="laptops.html" class="dropdown__product-title">Laptops</a>
+              <a href="watches.html" class="dropdown__product-title">Watches</a>
+              <a href="accessories.html" class="dropdown__product-title">Accessories</a>
+            </div>
+            <div class="dropdown__product-divier"></div>
+            <div class="dropdown__product-rside">
+              <div role="button"
+                onclick="redirectToDetails('MacBook Pro M3 Pro', 'Apple', 'assets/new-arrival/macbook.png', 'The MacBook Pro M3 Pro boasts impressive performance with the M3 Pro chip, long battery life, and a vibrant Retina display, ideal for professionals.', '$799', '4.7')"
+                class="categories__item">
+                <img src="assets/new-arrival/macbook.png" alt="Accessories" class="categories__icon">
+                <p class="categories__title">MacBook Pro M3 Pro</p>
+              </div>
+              <div role="button"
+                onclick="redirectToDetails('iPhone 15 Pro Max', 'Apple', 'assets/phones/iphone_15_pro.png', 'The iPhone 15 Pro Max features an A17 Pro chip, a stunning Super Retina XDR display, and an improved camera system with advanced computational photography.', '$999', '4.5')"
+                class="categories__item">
+                <img src="assets/phones/iphone_15_pro.png" alt="Accessories" class="categories__icon">
+                <p class="categories__title">iPhone 15 Pro Max</p>
+              </div>
+              <div role="button"
+                onclick="redirectToDetails('Samsung Galaxy S24', 'Samsung', 'assets/phones/samsung_galaxy_s24.png', 'The Samsung Galaxy S24 features a powerful Snapdragon processor, high-quality camera system, and a dynamic AMOLED display for stunning visuals.', '$899', '4.6')"
+                class="categories__item">
+                <img src="assets/phones/samsung_galaxy_s24.png" alt="Accessories" class="categories__icon">
+                <p class="categories__title">Samsung Galaxy S24</p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <a href="#">BRANDS</a>
+          <div class="dropdown__product">
+            <div class="dropdown__product-lside">
+              <a href="apple.html" class="dropdown__product-title">Apple</a>
+              <a href="samsung.html" class="dropdown__product-title">Samsung</a>
+              <a href="dell.html" class="dropdown__product-title">Dell</a>
+              <a href="lenovo.html" class="dropdown__product-title">Lenovo</a>
+            </div>
+            <div class="dropdown__product-divier"></div>
+            <div class="dropdown__product-rside">
+              <div role="button"
+                onclick="redirectToDetails('iPhone 15 Pro Max', 'Apple', 'assets/phones/iphone_15_pro.png', 'The iPhone 15 Pro Max features an A17 Pro chip, a stunning Super Retina XDR display, and an improved camera system with advanced computational photography.', '$999', '4.5')"
+                class="categories__item">
+                <img src="assets/phones/iphone_15_pro.png" alt="Accessories" class="categories__icon">
+                <p class="categories__title">iPhone 15 Pro Max</p>
+              </div>
+              <div role="button"
+                onclick="redirectToDetails('MacBook Pro M3 Pro', 'Apple', 'assets/new-arrival/macbook.png', 'The MacBook Pro M3 Pro boasts impressive performance with the M3 Pro chip, long battery life, and a vibrant Retina display, ideal for professionals.', '$799', '4.7')"
+                class="categories__item">
+                <img src="assets/new-arrival/macbook.png" alt="Accessories" class="categories__icon">
+                <p class="categories__title">MacBook Pro M3 Pro</p>
+              </div>
+              <div role="button"
+                onclick="redirectToDetails('Samsung Galaxy S24', 'Samsung', 'assets/phones/samsung_galaxy_s24.png', 'The Samsung Galaxy S24 features a powerful Snapdragon processor, high-quality camera system, and a dynamic AMOLED display for stunning visuals.', '$899', '4.6')"
+                class="categories__item">
+                <img src="assets/phones/samsung_galaxy_s24.png" alt="Accessories" class="categories__icon">
+                <p class="categories__title">Samsung Galaxy S24</p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li><a href="new-arrivals.html">NEW ARRIVALS</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="about-us.html">ABOUT US</a></li>
+        <li><a href="contact.html">CONTACT US</a></li>
+      </ul>
+    </div>
+
+    <div class="search-auth-container">
+      <div class="search-container">
+        <input type="search" placeholder="Search...">
+      </div>
+      <div>
+        <button type="submit" class="login-btn">
+          <a href="login.html">Login</a>
+        </button>
+      </div>
+    </div>
+  </header>
 
   <main class="terms-condition">
     <div class="breadcum">
-      <a href="/index.html">HOME</a> / <a href="/terms-condition.html">TERMS & CONDITIONS</a>
+      <a href="index.html">HOME</a> / <a href="terms-condition.html">TERMS & CONDITIONS</a>
     </div>
     <div class="terms-condition__content">
       <div class="terms-condition__content__title">
         <h1>Terms and Conditions</h1>
-        <p>Welcome to RL Electronics. These terms and conditions outline the rules and regulations for the use of RL Electronics' website, located at www.rlelectronics.com.</p>
+        <p>Welcome to RL Electronics. These terms and conditions outline the rules and regulations for the use of RL
+          Electronics' website, located at www.rlelectronics.com.</p>
       </div>
 
       <div class="terms-condition__content__section">
         <h2>1. Introduction</h2>
-        <p>By accessing this website, we assume you accept these terms and conditions in full. Do not continue to use RL Electronics' website if you do not agree to all of the terms and conditions stated on this page.</p>
+        <p>By accessing this website, we assume you accept these terms and conditions in full. Do not continue to use RL
+          Electronics' website if you do not agree to all of the terms and conditions stated on this page.</p>
       </div>
 
       <div class="terms-condition__content__section">
         <h2>2. Intellectual Property Rights</h2>
-        <p>Unless otherwise stated, RL Electronics owns the intellectual property rights for all material on this website. All intellectual property rights are reserved. You may view and/or print pages from <a href="https://www.rlelectronics.com">www.rlelectronics.com</a> for your own personal use, subject to restrictions set in these terms and conditions.</p>
+        <p>Unless otherwise stated, RL Electronics owns the intellectual property rights for all material on this
+          website. All intellectual property rights are reserved. You may view and/or print pages from <a
+            href="https://www.rlelectronics.com">www.rlelectronics.com</a> for your own personal use, subject to
+          restrictions set in these terms and conditions.</p>
       </div>
 
-      <div class="terms-condition__content__section">        
+      <div class="terms-condition__content__section">
         <h2>3. User Comments and Content</h2>
-        <p>Certain parts of this website offer the opportunity for users to post and exchange opinions, information, and data ('Comments'). RL Electronics does not screen, edit, publish, or review comments prior to their appearance on the website. Comments do not reflect the views or opinions of RL Electronics, its agents, or affiliates.</p>
+        <p>Certain parts of this website offer the opportunity for users to post and exchange opinions, information, and
+          data ('Comments'). RL Electronics does not screen, edit, publish, or review comments prior to their appearance
+          on the website. Comments do not reflect the views or opinions of RL Electronics, its agents, or affiliates.
+        </p>
       </div>
 
       <div class="terms-condition__content__section">
         <h2>4. Limitations of Liability</h2>
-        <p>In no event shall RL Electronics or its suppliers be liable for any damages (including, without limitation, damages for loss of data or profit, or due to business interruption) arising out of the use or inability to use the materials on RL Electronics' website.</p>
+        <p>In no event shall RL Electronics or its suppliers be liable for any damages (including, without limitation,
+          damages for loss of data or profit, or due to business interruption) arising out of the use or inability to
+          use the materials on RL Electronics' website.</p>
       </div>
 
       <div class="terms-condition__content__section">
         <h2>5. Product Availability</h2>
-        <p>All products listed on RL Electronics are subject to availability. We reserve the right to limit the quantity of any product or service that we offer. Any order may be subject to cancellation or modification at our discretion.</p>
+        <p>All products listed on RL Electronics are subject to availability. We reserve the right to limit the quantity
+          of any product or service that we offer. Any order may be subject to cancellation or modification at our
+          discretion.</p>
       </div>
 
       <div class="terms-condition__content__section">
         <h2>6. Pricing and Payment</h2>
-        <p>We strive to ensure that all pricing information on our website is accurate, though occasionally an error may occur. If we discover an error in the pricing of any goods you have ordered, we will inform you as soon as possible and allow you to cancel or confirm your order at the correct price. Payment must be completed at the time of purchase, and we accept various payment methods.</p>
+        <p>We strive to ensure that all pricing information on our website is accurate, though occasionally an error may
+          occur. If we discover an error in the pricing of any goods you have ordered, we will inform you as soon as
+          possible and allow you to cancel or confirm your order at the correct price. Payment must be completed at the
+          time of purchase, and we accept various payment methods.</p>
       </div>
 
       <div class="terms-condition__content__section">
         <h2>7. Returns and Refunds</h2>
-        <p>Our return and refund policy lasts 30 days. If 30 days have gone by since your purchase, unfortunately, we cannot offer you a refund or exchange. To be eligible for a return, your item must be unused and in the same condition that you received it, with all original packaging intact.</p>
+        <p>Our return and refund policy lasts 30 days. If 30 days have gone by since your purchase, unfortunately, we
+          cannot offer you a refund or exchange. To be eligible for a return, your item must be unused and in the same
+          condition that you received it, with all original packaging intact.</p>
       </div>
 
       <div class="terms-condition__content__section">
         <h2>8. Delivery and Shipping</h2>
-        <p>We ship to most locations worldwide. Shipping times may vary depending on the destination and availability of the product. RL Electronics is not responsible for delays caused by shipping carriers.</p>
+        <p>We ship to most locations worldwide. Shipping times may vary depending on the destination and availability of
+          the product. RL Electronics is not responsible for delays caused by shipping carriers.</p>
       </div>
 
       <div class="terms-condition__content__section">
         <h2>9. Governing Law</h2>
-        <p>These terms and conditions are governed by and construed in accordance with the laws of [Insert Country/State], and you irrevocably submit to the exclusive jurisdiction of the courts in that location.</p>
+        <p>These terms and conditions are governed by and construed in accordance with the laws of [Insert
+          Country/State], and you irrevocably submit to the exclusive jurisdiction of the courts in that location.</p>
       </div>
 
       <div class="terms-condition__content__section">
         <h2>10. Changes to Terms and Conditions</h2>
-        <p>RL Electronics reserves the right to modify these terms at any time. By continuing to use our website, you agree to be bound by the latest version of these terms and conditions.</p>
+        <p>RL Electronics reserves the right to modify these terms at any time. By continuing to use our website, you
+          agree to be bound by the latest version of these terms and conditions.</p>
       </div>
 
       <div class="terms-condition__content__section">
@@ -101,8 +200,49 @@
   </main>
 
   <!-- Footer -->
-  <footer id="footer-container"></footer>
+  <footer class="site-footer">
+    <div class="site-footer__container">
+      <div class="site-footer__section site-footer__company">
+        <h1 class="site-footer__title">COMPANY</h1>
+        <ul>
+          <li><a href="about-us.html">ABOUT US</a></li>
+          <li><a href="contact.html">CONTACT US</a></li>
+          <li><a href="privacy-policy.html">PRIVACY POLICY</a></li>
+          <li><a href="terms-condition.html">TERMS & CONDITIONS</a></li>
+        </ul>
+      </div>
+
+      <div class="site-footer__section site-footer__contact">
+        <h1 class="site-footer__title">CONTACT</h1>
+        <ul>
+          <li>
+            <img src="assets/location.png" alt="location" />
+            <a href="#">123 Main Street, Australia</a>
+          </li>
+          <li>
+            <img src="assets/call-calling.png" alt="phone" />
+            <a href="#">+1 (555) 123-4567</a>
+          </li>
+          <li>
+            <img src="assets/sms-edit.png" alt="email" />
+            <a href="#">RlElectronics@gmail.com</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="site-footer__section site-footer__map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2916.861474066967!2d147.04952807732147!3d-43.02330284933734!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xaa6e7e8a42ec5bb9%3A0x94440c47047f66a5!2s123%20Main%20St%2C%20Huonville%20TAS%207109%2C%20Australia!5e0!3m2!1sen!2sbt!4v1728061546623!5m2!1sen!2sbt"
+          width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+    <div class="site-footer__copyright">
+      &copy; 2024 RlElectronics. All rights reserved.
+    </div>
+  </footer>
   <!-- Scripts -->
-   <script src="../script.js"></script>
+  <script src="./js/script.js"></script>
 </body>
+
 </html>

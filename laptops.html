@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Laptops Page</title>
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="site-header__logo">
+      <div class="logo-container">
+        <img src="assets/rlelectronic.png" alt="RL Electronics" width="140" height="50" />
+      </div>
+
+      <div class="menu-toggle" onclick="toggleMenu()">
+        &#9776;
+      </div>
+    </div>
+    <div class="nav-container">
+      <ul>
+        <li>
+          <a href="index.html">HOME</a>
+        </li>
+        <li>
+          <a href="#">PRODUCTS</a>
+          <div class="dropdown__product">
+            <div class="dropdown__product-lside">
+              <a href="mobile-phone.html" class="dropdown__product-title">Mobile Phone</a>
+              <a href="laptops.html" class="dropdown__product-title">Laptops</a>
+              <a href="watches.html" class="dropdown__product-title">Watches</a>
+              <a href="accessories.html" class="dropdown__product-title">Accessories</a>
+            </div>
+            <div class="dropdown__product-divier"></div>
+            <div class="dropdown__product-rside">
+              <div role="button"
+                onclick="redirectToDetails('MacBook Pro M3 Pro', 'Apple', '/assets/new-arrival/macbook.png', 'The MacBook Pro M3 Pro boasts impressive performance with the M3 Pro chip, long battery life, and a vibrant Retina display, ideal for professionals.', '$799', '4.7')"
+                class="categories__item">
+                <img src="/assets/new-arrival/macbook.png" alt="Accessories" class="categories__icon">
+                <p class="categories__title">MacBook Pro M3 Pro</p>
+              </div>
+              <div role="button"
+                onclick="redirectToDetails('iPhone 15 Pro Max', 'Apple', '/assets/phones/iphone_15_pro.png', 'The iPhone 15 Pro Max features an A17 Pro chip, a stunning Super Retina XDR display, and an improved camera system with advanced computational photography.', '$999', '4.5')"
+                class="categories__item">
+                <img src="/assets/phones/iphone_15_pro.png" alt="Accessories" class="categories__icon">
+                <p class="categories__title">iPhone 15 Pro Max</p>
+              </div>
+              <div role="button"
+                onclick="redirectToDetails('Samsung Galaxy S24', 'Samsung', '/assets/phones/samsung_galaxy_s24.png', 'The Samsung Galaxy S24 features a powerful Snapdragon processor, high-quality camera system, and a dynamic AMOLED display for stunning visuals.', '$899', '4.6')"
+                class="categories__item">
+                <img src="/assets/phones/samsung_galaxy_s24.png" alt="Accessories" class="categories__icon">
+                <p class="categories__title">Samsung Galaxy S24</p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <a href="#">BRANDS</a>
+          <div class="dropdown__product">
+            <div class="dropdown__product-lside">
+              <a href="apple.html" class="dropdown__product-title">Apple</a>
+              <a href="samsung.html" class="dropdown__product-title">Samsung</a>
+              <a href="dell.html" class="dropdown__product-title">Dell</a>
+              <a href="lenovo.html" class="dropdown__product-title">Lenovo</a>
+            </div>
+            <div class="dropdown__product-divier"></div>
+            <div class="dropdown__product-rside">
+              <div role="button"
+                onclick="redirectToDetails('iPhone 15 Pro Max', 'Apple', '/assets/phones/iphone_15_pro.png', 'The iPhone 15 Pro Max features an A17 Pro chip, a stunning Super Retina XDR display, and an improved camera system with advanced computational photography.', '$999', '4.5')"
+                class="categories__item">
+                <img src="/assets/phones/iphone_15_pro.png" alt="Accessories" class="categories__icon">
+                <p class="categories__title">iPhone 15 Pro Max</p>
+              </div>
+              <div role="button"
+                onclick="redirectToDetails('MacBook Pro M3 Pro', 'Apple', '/assets/new-arrival/macbook.png', 'The MacBook Pro M3 Pro boasts impressive performance with the M3 Pro chip, long battery life, and a vibrant Retina display, ideal for professionals.', '$799', '4.7')"
+                class="categories__item">
+                <img src="/assets/new-arrival/macbook.png" alt="Accessories" class="categories__icon">
+                <p class="categories__title">MacBook Pro M3 Pro</p>
+              </div>
+              <div role="button"
+                onclick="redirectToDetails('Samsung Galaxy S24', 'Samsung', '/assets/phones/samsung_galaxy_s24.png', 'The Samsung Galaxy S24 features a powerful Snapdragon processor, high-quality camera system, and a dynamic AMOLED display for stunning visuals.', '$899', '4.6')"
+                class="categories__item">
+                <img src="/assets/phones/samsung_galaxy_s24.png" alt="Accessories" class="categories__icon">
+                <p class="categories__title">Samsung Galaxy S24</p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li><a href="new-arrivals.html">NEW ARRIVALS</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="about-us.html">ABOUT US</a></li>
+        <li><a href="contact.html">CONTACT US</a></li>
+      </ul>
+    </div>
+
+    <div class="search-auth-container">
+      <div class="search-container">
+        <input type="search" placeholder="Search...">
+      </div>
+      <div>
+        <button type="submit" class="login-btn">
+          <a href="login.html">Login</a>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="laptops-container">
+    <div class="breadcum">
+      <a href="index.html">HOME</a> / <a href="laptops.html">LAPTOPS</a>
+    </div>
+    <div class="container__products">
+      <div class="container__products__items">
+        <!-- Dell XPS 13 -->
+        <div role="button"
+          onclick="redirectToDetails('Dell XPS 13', 'Dell', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5rEXYsW0BayBpRgWRyGXaD2Zd4wG1fx6eqQ&s', '12th Gen Intel Core i7, 16GB RAM, 512GB SSD.', 1199, 4.7);"
+          class="container__products__item">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5rEXYsW0BayBpRgWRyGXaD2Zd4wG1fx6eqQ&s"
+            alt="Dell XPS 13" class="products__icon">
+          <p class="products__title">Dell XPS 13</p>
+          <p class="products__description">12th Gen Intel Core i7, 16GB RAM, 512GB SSD.</p>
+          <div class="products__price">
+            <p>$1,199</p>
+            <a>⭐️ 4.7</a>
+          </div>
+        </div>
+
+        <!-- Apple MacBook Air -->
+        <div role="button"
+          onclick="redirectToDetails('Apple MacBook Air', 'Apple', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAp3m6Z063HkI7HRt24sHp3zfbdXNOw5jVew&s', 'Apple M1 chip, 8GB RAM, 256GB SSD.', 999, 4.8);"
+          class="container__products__item">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAp3m6Z063HkI7HRt24sHp3zfbdXNOw5jVew&s"
+            alt="Apple MacBook Air" class="products__icon">
+          <p class="products__title">Apple MacBook Air</p>
+          <p class="products__description">Apple M1 chip, 8GB RAM, 256GB SSD.</p>
+          <div class="products__price">
+            <p>$999</p>
+            <a>⭐️ 4.8</a>
+          </div>
+        </div>
+
+        <!-- HP Spectre x360 -->
+        <div role="button"
+          onclick="redirectToDetails('HP Spectre x360', 'HP', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSx4pJgP4xjmog-DUFXVPVI78Aeuv4T-dZJ4w&s', 'Intel Core i7, 16GB RAM, 1TB SSD.', 1399, 4.6);"
+          class="container__products__item">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSx4pJgP4xjmog-DUFXVPVI78Aeuv4T-dZJ4w&s"
+            alt="HP Spectre x360" class="products__icon">
+          <p class="products__title">HP Spectre x360</p>
+          <p class="products__description">Intel Core i7, 16GB RAM, 1TB SSD.</p>
+          <div class="products__price">
+            <p>$1,399</p>
+            <a>⭐️ 4.6</a>
+          </div>
+        </div>
+
+        <!-- Lenovo ThinkPad X1 Carbon -->
+        <div role="button"
+          onclick="redirectToDetails('Lenovo ThinkPad X1 Carbon', 'Lenovo', 'https://m.media-amazon.com/images/I/61b4Q8ScqLL._AC_SL1500_.jpg', 'Intel Core i7, 16GB RAM, 1TB SSD.', 1499, 4.7);"
+          class="container__products__item">
+          <img src="https://m.media-amazon.com/images/I/61b4Q8ScqLL._AC_SL1500_.jpg" alt="Lenovo ThinkPad X1 Carbon"
+            class="products__icon">
+          <p class="products__title">Lenovo ThinkPad X1 Carbon</p>
+          <p class="products__description">Intel Core i7, 16GB RAM, 1TB SSD.</p>
+          <div class="products__price">
+            <p>$1,499</p>
+            <a>⭐️ 4.7</a>
+          </div>
+        </div>
+
+        <!-- Asus ZenBook 14 -->
+        <div role="button"
+          onclick="redirectToDetails('Asus ZenBook 14', 'Asus', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTk0nrTB4_Y7dVJOvWIWAp9jHQri3UxqCx2yg&s', 'Intel Core i5, 16GB RAM, 512GB SSD.', 899, 4.5);"
+          class="container__products__item">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTk0nrTB4_Y7dVJOvWIWAp9jHQri3UxqCx2yg&s"
+            alt="Asus ZenBook 14" class="products__icon">
+          <p class="products__title">Asus ZenBook 14</p>
+          <p class="products__description">Intel Core i5, 16GB RAM, 512GB SSD.</p>
+          <div class="products__price">
+            <p>$899</p>
+            <a>⭐️ 4.5</a>
+          </div>
+        </div>
+
+        <!-- Acer Swift 3 -->
+        <div role="button"
+          onclick="redirectToDetails('Acer Swift 3', 'Acer', 'https://i.ebayimg.com/images/g/u~4AAOSwgMFhPU7V/s-l1200.jpg', 'AMD Ryzen 7, 8GB RAM, 512GB SSD.', 749, 4.4);"
+          class="container__products__item">
+          <img src="https://i.ebayimg.com/images/g/u~4AAOSwgMFhPU7V/s-l1200.jpg" alt="Acer Swift 3"
+            class="products__icon">
+          <p class="products__title">Acer Swift 3</p>
+          <p class="products__description">AMD Ryzen 7, 8GB RAM, 512GB SSD.</p>
+          <div class="products__price">
+            <p>$749</p>
+            <a>⭐️ 4.4</a>
+          </div>
+        </div>
+
+        <!-- Microsoft Surface Laptop 4 -->
+        <div role="button"
+          onclick="redirectToDetails('Microsoft Surface Laptop 4', 'Microsoft', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRG66HrkN6-WEQrMQnfqzI0q5F4rhPaVw88pg&s', 'Intel Core i5, 8GB RAM, 512GB SSD.', 999, 4.6);"
+          class="container__products__item">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRG66HrkN6-WEQrMQnfqzI0q5F4rhPaVw88pg&s"
+            alt="Microsoft Surface Laptop 4" class="products__icon">
+          <p class="products__title">Microsoft Surface Laptop 4</p>
+          <p class="products__description">Intel Core i5, 8GB RAM, 512GB SSD.</p>
+          <div class="products__price">
+            <p>$999</p>
+            <a>⭐️ 4.6</a>
+          </div>
+        </div>
+
+        <!-- Razer Blade 15 -->
+        <div role="button"
+          onclick="redirectToDetails('Razer Blade 15', 'Razer', 'https://m.media-amazon.com/images/I/71VniIMpMkL.jpg', 'Intel Core i7, 16GB RAM, 1TB SSD.', 1799, 4.8);"
+          class="container__products__item">
+          <img src="https://m.media-amazon.com/images/I/71VniIMpMkL.jpg" alt="Razer Blade 15" class="products__icon">
+          <p class="products__title">Razer Blade 15</p>
+          <p class="products__description">Intel Core i7, 16GB RAM, 1TB SSD.</p>
+          <div class="products__price">
+            <p>$1,799</p>
+            <a>⭐️ 4.8</a>
+          </div>
+        </div>
+
+        <!-- Samsung Galaxy Book Pro -->
+        <div role="button"
+          onclick="redirectToDetails('Samsung Galaxy Book Pro', 'Samsung', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmZ8R8gjsismCGBVhWGmvNFFt72ZGXv7NPKA&s', 'Intel Core i7, 16GB RAM, 512GB SSD.', 1099, 4.7);"
+          class="container__products__item">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmZ8R8gjsismCGBVhWGmvNFFt72ZGXv7NPKA&s"
+            alt="Samsung Galaxy Book Pro" class="products__icon">
+          <p class="products__title">Samsung Galaxy Book Pro</p>
+          <p class="products__description">Intel Core i7, 16GB RAM, 512GB SSD.</p>
+          <div class="products__price">
+            <p>$1,099</p>
+            <a>⭐️ 4.7</a>
+          </div>
+        </div>
+
+        <!-- LG Gram 14 -->
+        <div role="button"
+          onclick="redirectToDetails('LG Gram 14', 'LG', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_Do7m6pcc0j_hJqrEpuoV8x2G22cKp8NpVQ&s', 'Intel Core i7, 16GB RAM, 1TB SSD.', 1299, 4.5);"
+          class="container__products__item">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_Do7m6pcc0j_hJqrEpuoV8x2G22cKp8NpVQ&s"
+            alt="LG Gram 14" class="products__icon">
+          <p class="products__title">LG Gram 14</p>
+          <p class="products__description">Intel Core i7, 16GB RAM, 1TB SSD.</p>
+          <div class="products__price">
+            <p>$1,299</p>
+            <a>⭐️ 4.5</a>
+          </div>
+        </div>
+
+        <!-- MSI GS66 Stealth -->
+        <div role="button"
+          onclick="redirectToDetails('MSI GS66 Stealth', 'MSI', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrRHFgYFDFIFaEnIyXdQsYFfEgKxNzwd5Lgw&s', 'Intel Core i7, 16GB RAM, 512GB SSD.', 1699, 4.6);"
+          class="container__products__item">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrRHFgYFDFIFaEnIyXdQsYFfEgKxNzwd5Lgw&s"
+            alt="MSI GS66 Stealth" class="products__icon">
+          <p class="products__title">MSI GS66 Stealth</p>
+          <p class="products__description">Intel Core i7, 16GB RAM, 512GB SSD.</p>
+          <div class="products__price">
+            <p>$1,699</p>
+            <a>⭐️ 4.6</a>
+          </div>
+        </div>
+
+        <!-- Gigabyte AORUS 15G -->
+        <div role="button"
+          onclick="redirectToDetails('Gigabyte AORUS 15G', 'Gigabyte', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcu1Q3nSl83RQC9fowFsmBu4CndeVkQuhq5A&s', 'Intel Core i7, 16GB RAM, 1TB SSD.', 1899, 4.8);"
+          class="container__products__item">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcu1Q3nSl83RQC9fowFsmBu4CndeVkQuhq5A&s"
+            alt="Gigabyte AORUS 15G" class="products__icon">
+          <p class="products__title">Gigabyte AORUS 15G</p>
+          <p class="products__description">Intel Core i7, 16GB RAM, 1TB SSD.</p>
+          <div class="products__price">
+            <p>$1,899</p>
+            <a>⭐️ 4.8</a>
+          </div>
+        </div>
+
+        <!-- Asus ROG Zephyrus G14 -->
+        <div role="button"
+          onclick="redirectToDetails('Asus ROG Zephyrus G14', 'Asus', 'https://images-cdn.ubuy.co.in/634f3d2f2cf747142d7fc9f4-2021-asus-rog-zephyrus-g14-ga401ih.jpg', 'AMD Ryzen 9, 16GB RAM, 1TB SSD.', 1499, 4.9);"
+          class="container__products__item">
+          <img src="https://images-cdn.ubuy.co.in/634f3d2f2cf747142d7fc9f4-2021-asus-rog-zephyrus-g14-ga401ih.jpg"
+            alt="Asus ROG Zephyrus G14" class="products__icon">
+          <p class="products__title">Asus ROG Zephyrus G14</p>
+          <p class="products__description">AMD Ryzen 9, 16GB RAM, 1TB SSD.</p>
+          <div class="products__price">
+            <p>$1,499</p>
+            <a>⭐️ 4.9</a>
+          </div>
+        </div>
+
+        <!-- Omen by HP 15 -->
+        <div role="button"
+          onclick="redirectToDetails('Omen by HP 15', 'HP', 'https://www.omen.com/content/dam/sites/omen/worldwide/laptops/omen-15-laptop/t-900_gamora-frontleft.png', 'Intel Core i7, 16GB RAM, 512GB SSD.', 1299, 4.5);"
+          class="container__products__item">
+          <img
+            src="https://www.omen.com/content/dam/sites/omen/worldwide/laptops/omen-15-laptop/t-900_gamora-frontleft.png"
+            alt="Omen by HP 15" class="products__icon">
+          <p class="products__title">Omen by HP 15</p>
+          <p class="products__description">Intel Core i7, 16GB RAM, 512GB SSD.</p>
+          <div class="products__price">
+            <p>$1,299</p>
+            <a>⭐️ 4.5</a>
+          </div>
+        </div>
+
+        <!-- CyberPowerPC Gamer Xtreme VR -->
+        <div role="button"
+          onclick="redirectToDetails('CyberPowerPC Gamer Xtreme VR', 'CyberPowerPC', 'https://m.media-amazon.com/images/I/71DvG2FjM+L._AC_UF1000,1000_QL80_.jpg', 'Intel Core i5, 8GB RAM, 500GB HDD.', 699, 4.4);"
+          class="container__products__item">
+          <img src="https://m.media-amazon.com/images/I/71DvG2FjM+L._AC_UF1000,1000_QL80_.jpg"
+            alt="CyberPowerPC Gamer Xtreme VR" class="products__icon">
+          <p class="products__title">CyberPowerPC Gamer Xtreme VR</p>
+          <p class="products__description">Intel Core i5, 8GB RAM, 500GB HDD.</p>
+          <div class="products__price">
+            <p>$699</p>
+            <a>⭐️ 4.4</a>
+          </div>
+        </div>
+
+        <!-- Acer Predator Helios 300 -->
+        <div role="button"
+          onclick="redirectToDetails('Acer Predator Helios 300', 'Acer', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqMirX52HJhqJb3KLqns9LKZx0gaUdIiS0og&s', 'Intel Core i7, 16GB RAM, 512GB SSD.', 1199, 4.6);"
+          class="container__products__item">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqMirX52HJhqJb3KLqns9LKZx0gaUdIiS0og&s"
+            alt="Acer Predator Helios 300" class="products__icon">
+          <p class="products__title">Acer Predator Helios 300</p>
+          <p class="products__description">Intel Core i7, 16GB RAM, 512GB SSD.</p>
+          <div class="products__price">
+            <p>$1,199</p>
+            <a>⭐️ 4.6</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="site-footer__container">
+      <div class="site-footer__section site-footer__company">
+        <h1 class="site-footer__title">COMPANY</h1>
+        <ul>
+          <li><a href="/about-us.html">ABOUT US</a></li>
+          <li><a href="contact.html">CONTACT US</a></li>
+          <li><a href="/privacy-policy.html">PRIVACY POLICY</a></li>
+          <li><a href="/terms-condition.html">TERMS & CONDITIONS</a></li>
+        </ul>
+      </div>
+
+      <div class="site-footer__section site-footer__contact">
+        <h1 class="site-footer__title">CONTACT</h1>
+        <ul>
+          <li>
+            <img src="../assets/location.png" alt="location" />
+            <a href="#">123 Main Street, Australia</a>
+          </li>
+          <li>
+            <img src="../assets/call-calling.png" alt="phone" />
+            <a href="#">+1 (555) 123-4567</a>
+          </li>
+          <li>
+            <img src="../assets/sms-edit.png" alt="email" />
+            <a href="#">RlElectronics@gmail.com</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="site-footer__section site-footer__map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2916.861474066967!2d147.04952807732147!3d-43.02330284933734!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xaa6e7e8a42ec5bb9%3A0x94440c47047f66a5!2s123%20Main%20St%2C%20Huonville%20TAS%207109%2C%20Australia!5e0!3m2!1sen!2sbt!4v1728061546623!5m2!1sen!2sbt"
+          width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+    <div class="site-footer__copyright">
+      &copy; 2024 RlElectronics. All rights reserved.
+    </div>
+  </footer>
+  <script src="./js/laptop.js"></script>
+</body>
+
+</html>

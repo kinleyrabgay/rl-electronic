@@ -4,8 +4,36 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login Page</title>
+  <title>Mobile Phones Page</title>
   <link rel="stylesheet" href="./css/style.css" />
+
+  <!-- Script -->
+  <script>
+    // Load the brand category component
+    fetch('/components/brand-category.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('brand-category-container').innerHTML = data;
+        setupBrandCategoryClickListeners(); // Set up click listeners after loading
+
+      })
+      .catch(error => console.error('Error loading footer:', error));
+
+    // Function to set up click event listeners
+    function setupBrandCategoryClickListeners() {
+      const brandItems = document.querySelectorAll('.brand-category__item');
+
+      brandItems.forEach(item => {
+        // Trigger logic only on click of the item
+        item.addEventListener('click', function () {
+          // Remove 'active' class from all items
+          brandItems.forEach(i => i.classList.remove('active'));
+          // Add 'active' class to the clicked item
+          this.classList.add('active');
+        });
+      });
+    }
+  </script>
 </head>
 
 <body>
@@ -102,31 +130,36 @@
       </div>
       <div>
         <button type="submit" class="login-btn">
-          <a href="login.html">Login</a>
+          <a href="/login.html">Login</a>
         </button>
       </div>
     </div>
   </header>
 
-  <main class="login-container">
+  <main class="mobile-phones-container">
     <div class="breadcum">
-      <a href="index.html">HOME</a> / <a href="login.html">LOGIN</a>
+      <a href="index.html">HOME</a> / <a href="mobile-phone.html">MOBILE PHONES</a>
     </div>
-    <div class="login-form">
-      <h1 class="gradient-text">Welcome to RlElectronics</h1>
-      <p>Hello there 👋, We are glad to see you! Everything you need we got it covered just for you.</p>
-      <form class="login-form__form">
-        <input type="email" class="form__input" placeholder="Email" required>
-        <input type="password" class="form__input" placeholder="Password" required>
-        <button type="submit" class="login-btn">Login</button>
-
-        <div class="login-form__divider">
-          <hr>
-          <p>or sign in with</p>
-          <hr>
-        </div>
-        <button type="text" class="google-btn">Login with Google</button>
-      </form>
+    <div class="brand-category">
+      <div class="brand-category__item" tabindex="0" data-brand="Apple">
+        <p class="brand-category__title">Apple</p>
+      </div>
+      <div class="brand-category__item" tabindex="0" data-brand="Google">
+        <p class="brand-category__title">Google</p>
+      </div>
+      <div class="brand-category__item" tabindex="0" data-brand="Samsung">
+        <p class="brand-category__title">Samsung</p>
+      </div>
+      <div class="brand-category__item" tabindex="0" data-brand="OnePlus">
+        <p class="brand-category__title">OnePlus</p>
+      </div>
+      <div class="brand-category__item" tabindex="0" data-brand="Oppo">
+        <p class="brand-category__title">Oppo</p>
+      </div>
+    </div>
+    <div class="container__products">
+      <div class="container__products__items"></div>
+    </div>
   </main>
 
   <!-- Footer -->
@@ -135,10 +168,10 @@
       <div class="site-footer__section site-footer__company">
         <h1 class="site-footer__title">COMPANY</h1>
         <ul>
-          <li><a href="about-us.html">ABOUT US</a></li>
+          <li><a href="/about-us.html">ABOUT US</a></li>
           <li><a href="contact.html">CONTACT US</a></li>
-          <li><a href="privacy-policy.html">PRIVACY POLICY</a></li>
-          <li><a href="terms-condition.html">TERMS & CONDITIONS</a></li>
+          <li><a href="/privacy-policy.html">PRIVACY POLICY</a></li>
+          <li><a href="/terms-condition.html">TERMS & CONDITIONS</a></li>
         </ul>
       </div>
 
@@ -146,15 +179,15 @@
         <h1 class="site-footer__title">CONTACT</h1>
         <ul>
           <li>
-            <img src="assets/location.png" alt="location" />
+            <img src="../assets/location.png" alt="location" />
             <a href="#">123 Main Street, Australia</a>
           </li>
           <li>
-            <img src="assets/call-calling.png" alt="phone" />
+            <img src="../assets/call-calling.png" alt="phone" />
             <a href="#">+1 (555) 123-4567</a>
           </li>
           <li>
-            <img src="assets/sms-edit.png" alt="email" />
+            <img src="../assets/sms-edit.png" alt="email" />
             <a href="#">RlElectronics@gmail.com</a>
           </li>
         </ul>
@@ -171,6 +204,7 @@
       &copy; 2024 RlElectronics. All rights reserved.
     </div>
   </footer>
+  <script src="./js/mobile.js"></script>
 </body>
 
 </html>

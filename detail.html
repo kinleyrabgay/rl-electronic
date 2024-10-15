@@ -5,25 +5,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Details Page</title>
-  <link rel="stylesheet" href="../style.css" />
-  <script src="new-arrivals.js"></script>
+  <link rel="stylesheet" href="./css/style.css" />
+  <script src="./js/new-arrivals.js"></script>
+
   <script>
-    // Load the header component
-    fetch('/components/header.html')
-      .then((response) => response.text())
-      .then((data) => {
-        document.getElementById('header-container').innerHTML = data;
-      })
-      .catch((error) => console.error('Error loading header:', error));
-
-    // Load the footer component
-    fetch('/components/footer.html')
-      .then((response) => response.text())
-      .then((data) => {
-        document.getElementById('footer-container').innerHTML = data;
-      })
-      .catch((error) => console.error('Error loading footer:', error));
-
     window.onload = function () {
       const url = new URL(document.location.href);
       const title = url.searchParams.get('title');
@@ -49,11 +34,107 @@
 
 <body>
   <!-- Header -->
-  <header id="header-container"></header>
+  <header class="site-header">
+    <div class="site-header__logo">
+      <div class="logo-container">
+        <img src="assets/rlelectronic.png" alt="RL Electronics" width="140" height="50" />
+      </div>
+
+      <div class="menu-toggle" onclick="toggleMenu()">
+        &#9776;
+      </div>
+    </div>
+    <div class="nav-container">
+      <ul>
+        <li>
+          <a href="index.html">HOME</a>
+        </li>
+        <li>
+          <a href="#">PRODUCTS</a>
+          <div class="dropdown__product">
+            <div class="dropdown__product-lside">
+              <a href="mobile-phone.html" class="dropdown__product-title">Mobile Phone</a>
+              <a href="laptops.html" class="dropdown__product-title">Laptops</a>
+              <a href="watches.html" class="dropdown__product-title">Watches</a>
+              <a href="accessories.html" class="dropdown__product-title">Accessories</a>
+            </div>
+            <div class="dropdown__product-divier"></div>
+            <div class="dropdown__product-rside">
+              <div role="button"
+                onclick="redirectToDetails('MacBook Pro M3 Pro', 'Apple', 'assets/new-arrival/macbook.png', 'The MacBook Pro M3 Pro boasts impressive performance with the M3 Pro chip, long battery life, and a vibrant Retina display, ideal for professionals.', '$799', '4.7')"
+                class="categories__item">
+                <img src="/assets/new-arrival/macbook.png" alt="Accessories" class="categories__icon">
+                <p class="categories__title">MacBook Pro M3 Pro</p>
+              </div>
+              <div role="button"
+                onclick="redirectToDetails('iPhone 15 Pro Max', 'Apple', 'assets/phones/iphone_15_pro.png', 'The iPhone 15 Pro Max features an A17 Pro chip, a stunning Super Retina XDR display, and an improved camera system with advanced computational photography.', '$999', '4.5')"
+                class="categories__item">
+                <img src="/assets/phones/iphone_15_pro.png" alt="Accessories" class="categories__icon">
+                <p class="categories__title">iPhone 15 Pro Max</p>
+              </div>
+              <div role="button"
+                onclick="redirectToDetails('Samsung Galaxy S24', 'Samsung', 'assets/phones/samsung_galaxy_s24.png', 'The Samsung Galaxy S24 features a powerful Snapdragon processor, high-quality camera system, and a dynamic AMOLED display for stunning visuals.', '$899', '4.6')"
+                class="categories__item">
+                <img src="/assets/phones/samsung_galaxy_s24.png" alt="Accessories" class="categories__icon">
+                <p class="categories__title">Samsung Galaxy S24</p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <a href="#">BRANDS</a>
+          <div class="dropdown__product">
+            <div class="dropdown__product-lside">
+              <a href="apple.html" class="dropdown__product-title">Apple</a>
+              <a href="samsung.html" class="dropdown__product-title">Samsung</a>
+              <a href="dell.html" class="dropdown__product-title">Dell</a>
+              <a href="lenovo.html" class="dropdown__product-title">Lenovo</a>
+            </div>
+            <div class="dropdown__product-divier"></div>
+            <div class="dropdown__product-rside">
+              <div role="button"
+                onclick="redirectToDetails('iPhone 15 Pro Max', 'Apple', 'assets/phones/iphone_15_pro.png', 'The iPhone 15 Pro Max features an A17 Pro chip, a stunning Super Retina XDR display, and an improved camera system with advanced computational photography.', '$999', '4.5')"
+                class="categories__item">
+                <img src="/assets/phones/iphone_15_pro.png" alt="Accessories" class="categories__icon">
+                <p class="categories__title">iPhone 15 Pro Max</p>
+              </div>
+              <div role="button"
+                onclick="redirectToDetails('MacBook Pro M3 Pro', 'Apple', 'assets/new-arrival/macbook.png', 'The MacBook Pro M3 Pro boasts impressive performance with the M3 Pro chip, long battery life, and a vibrant Retina display, ideal for professionals.', '$799', '4.7')"
+                class="categories__item">
+                <img src="/assets/new-arrival/macbook.png" alt="Accessories" class="categories__icon">
+                <p class="categories__title">MacBook Pro M3 Pro</p>
+              </div>
+              <div role="button"
+                onclick="redirectToDetails('Samsung Galaxy S24', 'Samsung', 'assets/phones/samsung_galaxy_s24.png', 'The Samsung Galaxy S24 features a powerful Snapdragon processor, high-quality camera system, and a dynamic AMOLED display for stunning visuals.', '$899', '4.6')"
+                class="categories__item">
+                <img src="/assets/phones/samsung_galaxy_s24.png" alt="Accessories" class="categories__icon">
+                <p class="categories__title">Samsung Galaxy S24</p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li><a href="new-arrivals.html">NEW ARRIVALS</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="about-us.html">ABOUT US</a></li>
+        <li><a href="contact.html">CONTACT US</a></li>
+      </ul>
+    </div>
+
+    <div class="search-auth-container">
+      <div class="search-container">
+        <input type="search" placeholder="Search...">
+      </div>
+      <div>
+        <button type="submit" class="login-btn">
+          <a href="login.html">Login</a>
+        </button>
+      </div>
+    </div>
+  </header>
 
   <main class="faq-container">
     <div class="breadcum">
-      <a href="/index.html">HOME</a> / <a href="/detail.html">DETAILS</a>
+      <a href="index.html">HOME</a> / <a href="detail.html">DETAILS</a>
     </div>
 
     <div class="detail-container">
@@ -75,7 +156,49 @@
       <div class="detail-container__recommend">
         <p>YOU MAY ALSO LIKE</p>
         <div class="products__container">
-          <div class="container__products__items-suggestion"></div>
+          <div class="container__products__items-suggestion">
+            <div role="button"
+              onclick="redirectToDetails('Apple MacBook Pro 14', 'Apple', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWatxfWIyHYzqLF-Sm3AjdKVNmfhleHHc6dw&s', 'M1 Pro chip, 16GB RAM, 512GB SSD.', 1999, 4.9);"
+              class="container__products__item">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWatxfWIyHYzqLF-Sm3AjdKVNmfhleHHc6dw&s"
+                alt="Apple MacBook Pro 14" class="products__icon">
+              <p class="products__title">Apple MacBook Pro 14</p>
+              <p class="products__description">M1 Pro chip, 16GB RAM, 512GB SSD.</p>
+              <div class="products__price">
+                <p>$1,999</p>
+                <a>⭐️ 4.9</a>
+              </div>
+            </div>
+
+            <!-- Samsung Galaxy S21 -->
+            <div role="button"
+              onclick="redirectToDetails('Samsung Galaxy S21', 'Samsung', 'https://cdn.movertix.com/media/catalog/product/cache/image/1200x/s/a/samsung-galaxy-s21-5g-phantom-grey-128gb-and-8gb-ram-sm-g991b_1.jpg', '108MP triple camera, 5G capable.', 799, 4.7);"
+              class="container__products__item">
+              <img
+                src="https://cdn.movertix.com/media/catalog/product/cache/image/1200x/s/a/samsung-galaxy-s21-5g-phantom-grey-128gb-and-8gb-ram-sm-g991b_1.jpg"
+                alt="Samsung Galaxy S21" class="products__icon">
+              <p class="products__title">Samsung Galaxy S21</p>
+              <p class="products__description">108MP triple camera, 5G capable.</p>
+              <div class="products__price">
+                <p>$799</p>
+                <a>⭐️ 4.7</a>
+              </div>
+            </div>
+
+            <!-- Lenovo ThinkPad X1 Carbon -->
+            <div role="button"
+              onclick="redirectToDetails('Lenovo ThinkPad X1 Carbon', 'Lenovo', 'https://m.media-amazon.com/images/I/61b4Q8ScqLL._AC_SL1500_.jpg', 'Intel i5, 14-inch, ultra-light design.', 1599, 4.9);"
+              class="container__products__item">
+              <img src="https://m.media-amazon.com/images/I/61b4Q8ScqLL._AC_SL1500_.jpg" alt="Lenovo ThinkPad X1 Carbon"
+                class="products__icon">
+              <p class="products__title">Lenovo ThinkPad X1 Carbon</p>
+              <p class="products__description">Intel i5, 14-inch, ultra-light design.</p>
+              <div class="products__price">
+                <p>$1,599</p>
+                <a>⭐️ 4.9</a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -83,7 +206,47 @@
   </main>
 
   <!-- Footer -->
-  <footer id="footer-container"></footer>
+  <footer class="site-footer">
+    <div class="site-footer__container">
+      <div class="site-footer__section site-footer__company">
+        <h1 class="site-footer__title">COMPANY</h1>
+        <ul>
+          <li><a href="about-us.html">ABOUT US</a></li>
+          <li><a href="contact.html">CONTACT US</a></li>
+          <li><a href="privacy-policy.html">PRIVACY POLICY</a></li>
+          <li><a href="terms-condition.html">TERMS & CONDITIONS</a></li>
+        </ul>
+      </div>
+
+      <div class="site-footer__section site-footer__contact">
+        <h1 class="site-footer__title">CONTACT</h1>
+        <ul>
+          <li>
+            <img src="assets/location.png" alt="location" />
+            <a href="#">123 Main Street, Australia</a>
+          </li>
+          <li>
+            <img src="assets/call-calling.png" alt="phone" />
+            <a href="#">+1 (555) 123-4567</a>
+          </li>
+          <li>
+            <img src="assets/sms-edit.png" alt="email" />
+            <a href="#">RlElectronics@gmail.com</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="site-footer__section site-footer__map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2916.861474066967!2d147.04952807732147!3d-43.02330284933734!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xaa6e7e8a42ec5bb9%3A0x94440c47047f66a5!2s123%20Main%20St%2C%20Huonville%20TAS%207109%2C%20Australia!5e0!3m2!1sen!2sbt!4v1728061546623!5m2!1sen!2sbt"
+          width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+    <div class="site-footer__copyright">
+      &copy; 2024 RlElectronics. All rights reserved.
+    </div>
+  </footer>
 </body>
 
 </html>

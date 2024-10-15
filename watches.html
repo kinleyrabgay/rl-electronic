@@ -4,8 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Us</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <title>Watches Page</title>
+  <link rel="stylesheet" href="./css/style.css" />
 </head>
 
 <body>
@@ -108,128 +108,113 @@
     </div>
   </header>
 
-  <main class="about-us">
+  <main class="watches-container">
     <div class="breadcum">
-      <a href="index.html">HOME</a> / <a href="about-us.html">ABOUT US</a>
+      <a href="index.html">HOME</a> / <a href="watches.html">WATCHES</a>
     </div>
-
-    <div class="about-us__header">
-      <p class="about-us__header-title">
-        <span class="black-text">We Power </span>
-        <span class="gradient-text">Electronics</span>
-        <span class="black-text"> for Billions</span>
-      </p>
-
-      <p class="about-us__header-description">
-        At RLElectronics, we believe in the transformative power of technology. Based in the heart of innovation, we
-        specialize in providing cutting-edge electronic solutions tailored to meet the unique needs of businesses and
-        consumers alike. Our commitment to quality and excellence drives us to continuously enhance our product
-        offerings, ensuring that we remain at the forefront of the industry. With a global reach and a passion for
-        sustainability, we empower our clients to harness the full potential of technology while fostering a greener
-        future.
-      </p>
-    </div>
-
-    <div class="about-us__vision">
-      <p class="about-us__vision-title gradient-text">OUR SHARED VISION</p>
-      <p class="about-us__vision-description">
-        <span class="black-text">Components that Empower RLElectronics to </span>
-        <span class="gradient-text">Provide World Class Services</span>
-      </p>
-
-      <div class="about-us__vision-stats">
-        <div class="about-us__vision-stat">
-          <p class="about-us__vision-stat-title">GLOBAL TEAM</p>
-          <p class="about-us__vision-stat-description">200+ Experts</p>
-        </div>
-        <div class="about-us__vision-stat">
-          <p class="about-us__vision-stat-title">YEARS IN BUSINESS</p>
-          <p class="about-us__vision-stat-description">15 Years</p>
-        </div>
-        <div class="about-us__vision-stat">
-          <p class="about-us__vision-stat-title">OFFICES</p>
-          <p class="about-us__vision-stat-description">10 Locations</p>
-        </div>
-        <div class="about-us__vision-stat">
-          <p class="about-us__vision-stat-title">CLIENTS</p>
-          <p class="about-us__vision-stat-description">500+ Customers</p>
-        </div>
-        <div class="about-us__vision-stat">
-          <p class="about-us__vision-stat-title">PRODUCTS</p>
-          <p class="about-us__vision-stat-description">300+ Products</p>
-        </div>
-        <div class="about-us__vision-stat">
-          <p class="about-us__vision-stat-title">AWARDS</p>
-          <p class="about-us__vision-stat-description">5 Awards</p>
-        </div>
-        <div class="about-us__vision-stat">
-          <p class="about-us__vision-stat-title">PARTNERSHIPS</p>
-          <p class="about-us__vision-stat-description">50+ Brands</p>
-        </div>
-        <div class="about-us__vision-stat">
-          <p class="about-us__vision-stat-title">CUSTOMER SUPPORT</p>
-          <p class="about-us__vision-stat-description">24/7 Support</p>
-        </div>
-      </div>
-
-      <div class="about-us__leadership">
-        <p class="about-us__leadership-title black-text">Leadership Team</p>
-        <div class="about-us__leadership-cards">
-          <div class="about-us__leadership-card">
-            <img src="assets/category/camera.png" alt="team" class="about-us__leadership-image" />
-            <div class="about-us__leadership-info">
-              <p class="about-us__leadership-name">Rinzin Lhamo</p>
-              <p class="about-us__leadership-position">CEO & Founder</p>
-            </div>
+    <div class="container__products">
+      <div class="container__products__items">
+        <div role="button"
+          onclick="redirectToDetails('Apple Watch Series 7', 'Apple', 'assets/watches/apple_watch_series_7.png', 'Stylish smartwatch with advanced health features and larger display.', '$399', '4.8');"
+          class="container__products__item">
+          <img src="assets/watches/apple_watch_series_7.png" alt="Apple Watch Series 7" class="products__icon">
+          <p class="products__title">Apple Watch Series 7</p>
+          <p class="products__description">Stylish smartwatch with advanced health features and larger display.</p>
+          <div class="products__price">
+            <p>$399</p>
+            <a>⭐️ 4.8</a>
           </div>
-          <div class="about-us__leadership-card">
-            <img src="assets/category/camera.png" alt="team" class="about-us__leadership-image" />
-            <div class="about-us__leadership-info">
-              <p class="about-us__leadership-name">John Doe</p>
-              <p class="about-us__leadership-position">CEO</p>
-            </div>
+        </div>
+        <div role="button"
+          onclick="redirectToDetails('Samsung Galaxy Watch 4', 'Samsung', 'assets/watches/samsung_galaxy_watch_4.png', 'Comprehensive fitness tracking and Wear OS powered smartwatch.', '$299', '4.6');"
+          class="container__products__item">
+          <img src="assets/watches/samsung_galaxy_watch_4.png" alt="Samsung Galaxy Watch 4" class="products__icon">
+          <p class="products__title">Samsung Galaxy Watch 4</p>
+          <p class="products__description">Comprehensive fitness tracking and Wear OS powered smartwatch.</p>
+          <div class="products__price">
+            <p>$299</p>
+            <a>⭐️ 4.6</a>
           </div>
-          <div class="about-us__leadership-card">
-            <img src="assets/category/camera.png" alt="team" class="about-us__leadership-image" />
-            <div class="about-us__leadership-info">
-              <p class="about-us__leadership-name">John Doe</p>
-              <p class="about-us__leadership-position">CEO</p>
-            </div>
+        </div>
+        <div role="button"
+          onclick="redirectToDetails('Fitbit Versa 3', 'Fitbit', 'assets/watches/fitbit_versa_3.png', 'Smartwatch with GPS and heart-rate monitoring, perfect for fitness enthusiasts.', '$229', '4.7');"
+          class="container__products__item">
+          <img src="assets/watches/fitbit_versa_3.png" alt="Fitbit Versa 3" class="products__icon">
+          <p class="products__title">Fitbit Versa 3</p>
+          <p class="products__description">Smartwatch with GPS and heart-rate monitoring, perfect for fitness
+            enthusiasts.</p>
+          <div class="products__price">
+            <p>$229</p>
+            <a>⭐️ 4.7</a>
           </div>
-          <div class="about-us__leadership-card">
-            <img src="assets/category/camera.png" alt="team" class="about-us__leadership-image" />
-            <div class="about-us__leadership-info">
-              <p class="about-us__leadership-name">John Doe</p>
-              <p class="about-us__leadership-position">CEO</p>
-            </div>
+        </div>
+        <div role="button"
+          onclick="redirectToDetails('Garmin Fenix 6', 'Garmin', 'assets/watches/garmin_fenix_6.png', 'Rugged multisport GPS smartwatch with outdoor navigation capabilities.', '$599', '4.5');"
+          class="container__products__item">
+          <img src="assets/watches/garmin_fenix_6.png" alt="Garmin Fenix 6" class="products__icon">
+          <p class="products__title">Garmin Fenix 6</p>
+          <p class="products__description">Rugged multisport GPS smartwatch with outdoor navigation capabilities.</p>
+          <div class="products__price">
+            <p>$599</p>
+            <a>⭐️ 4.5</a>
           </div>
-          <div class="about-us__leadership-card">
-            <img src="assets/category/camera.png" alt="team" class="about-us__leadership-image" />
-            <div class="about-us__leadership-info">
-              <p class="about-us__leadership-name">John Doe</p>
-              <p class="about-us__leadership-position">CEO</p>
-            </div>
+        </div>
+        <div role="button"
+          onclick="redirectToDetails('Huawei Watch GT 3', 'Huawei', 'assets/watches/huawei_watch_gt_3.png', 'Smartwatch with long battery life and advanced health management.', '$249', '4.2');"
+          class="container__products__item">
+          <img src="assets/watches/huawei_watch_gt_3.png" alt="Huawei Watch GT 3" class="products__icon">
+          <p class="products__title">Huawei Watch GT 3</p>
+          <p class="products__description">Smartwatch with long battery life and advanced health management.</p>
+          <div class="products__price">
+            <p>$249</p>
+            <a>⭐️ 4.2</a>
           </div>
-          <div class="about-us__leadership-card">
-            <img src="assets/category/camera.png" alt="team" class="about-us__leadership-image" />
-            <div class="about-us__leadership-info">
-              <p class="about-us__leadership-name">John Doe</p>
-              <p class="about-us__leadership-position">CEO</p>
-            </div>
+        </div>
+        <div role="button"
+          onclick="redirectToDetails('Fossil Gen 6', 'Fossil', 'assets/watches/fossil_gen_6.png', 'Smartwatch powered by Wear OS with fast charging and SpO2 tracking.', '$299', '4.9');"
+          class="container__products__item">
+          <img src="assets/watches/fossil_gen_6.png" alt="Fossil Gen 6" class="products__icon">
+          <p class="products__title">Fossil Gen 6</p>
+          <p class="products__description">Smartwatch powered by Wear OS with fast charging and SpO2 tracking.</p>
+          <div class="products__price">
+            <p>$299</p>
+            <a>⭐️ 4.9</a>
           </div>
-          <div class="about-us__leadership-card">
-            <img src="assets/category/camera.png" alt="team" class="about-us__leadership-image" />
-            <div class="about-us__leadership-info">
-              <p class="about-us__leadership-name">John Doe</p>
-              <p class="about-us__leadership-position">CEO</p>
-            </div>
+        </div>
+        <div role="button"
+          onclick="redirectToDetails('Amazfit GTR 3', 'Amazfit', 'assets/watches/amazfit_gtr_3.png', 'Sleek smartwatch with health monitoring and 21-day battery life.', '$179', '4.6');"
+          class="container__products__item">
+          <img src="assets/watches/amazfit_gtr_3.png" alt="Amazfit GTR 3" class="products__icon">
+          <p class="products__title">Amazfit GTR 3</p>
+          <p class="products__description">Sleek smartwatch with health monitoring and 21-day battery life.</p>
+          <div class="products__price">
+            <p>$179</p>
+            <a>⭐️ 4.6</a>
           </div>
-          <div class="about-us__leadership-card">
-            <img src="assets/category/camera.png" alt="team" class="about-us__leadership-image" />
-            <div class="about-us__leadership-info">
-              <p class="about-us__leadership-name">John Doe</p>
-              <p class="about-us__leadership-position">CEO</p>
-            </div>
+        </div>
+        <!-- Additional products -->
+        <div role="button"
+          onclick="redirectToDetails('TicWatch Pro 3', 'TicWatch', 'assets/watches/ticwatch_pro_3.png', 'Dual-layer display technology with long battery life and health monitoring.', '$299', '4.5');"
+          class="container__products__item">
+          <img src="assets/watches/ticwatch_pro_3.png" alt="TicWatch Pro 3" class="products__icon">
+          <p class="products__title">TicWatch Pro 3</p>
+          <p class="products__description">Dual-layer display technology with long battery life and health monitoring.
+          </p>
+          <div class="products__price">
+            <p>$299</p>
+            <a>⭐️ 4.5</a>
+          </div>
+        </div>
+        <div role="button"
+          onclick="redirectToDetails('Withings ScanWatch', 'Withings', 'assets/watches/withings_scanwatch.png', 'Hybrid smartwatch with ECG, heart rate monitor, and medical-grade tracking.', '$279', '4.7');"
+          class="container__products__item">
+          <img src="assets/watches/withings_scanwatch.png" alt="Withings ScanWatch" class="products__icon">
+          <p class="products__title">Withings ScanWatch</p>
+          <p class="products__description">Hybrid smartwatch with ECG, heart rate monitor, and medical-grade tracking.
+          </p>
+          <div class="products__price">
+            <p>$279</p>
+            <a>⭐️ 4.7</a>
           </div>
         </div>
       </div>
@@ -278,7 +263,6 @@
       &copy; 2024 RlElectronics. All rights reserved.
     </div>
   </footer>
-  <!-- Scripts -->
   <script src="./js/script.js"></script>
 </body>
 

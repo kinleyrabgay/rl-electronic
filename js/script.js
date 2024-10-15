@@ -155,7 +155,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 function redirectToDetails(title, brand, imgSrc, description, price, rating) {
-  const url = `/detail.html?title=${encodeURIComponent(
+  const url = `detail.html?title=${encodeURIComponent(
     title
   )}&brand=${encodeURIComponent(brand)}&imgSrc=${encodeURIComponent(
     imgSrc
