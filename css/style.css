@@ -849,8 +849,7 @@ body {
   margin-top: 3rem;
   border-radius: 4px;
   animation: fadeIn 0.5s forwards;
-  overflow: scroll;
-  
+  overflow: scroll; 
 }
 
 .brand-category__item {
